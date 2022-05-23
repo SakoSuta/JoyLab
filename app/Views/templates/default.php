@@ -12,6 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../public/css/style.css " rel="stylesheet">
 
 </head>
 
@@ -19,8 +20,16 @@
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="index.php">Project name</a>
+        <div class="navbar-header navigg">
+            <a href="index.php">
+                <img src="../public/img/Joy.svg" alt="logo" width="301px">
+            </a>
+            <div class="aaa">
+                <a href="">User</a>
+                <a href="http://localhost/Lecon/Sources-Model-View-Controller/public/index.php?p=admin.posts.index">Produit</a>
+                <a href="http://localhost/Lecon/Sources-Model-View-Controller/public/index.php?p=admin.categories.index">Catégories</a>
+                <a href="http://localhost/Lecon/Sources-Model-View-Controller/public/index.php?p=users.login">Déconnexions</a>
+            </div>
         </div>
     </div>
 </nav>
