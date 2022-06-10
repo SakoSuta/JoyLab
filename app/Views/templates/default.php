@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +11,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@300;500&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
 
     <title><?= App::getInstance()->title; ?></title>
 
@@ -24,108 +25,103 @@
 
 <body>
 
-<nav class="navig ligne">
+    <nav class="navig">
+        <div class="contenuNav">
+            <a href="index.php">
+                <img class="LogoNav" src="../public/img/Logo/JoyW.svg" alt="logo">
+            </a>
+            <div class="categorieNav font24 policeIBM">
+                <a class="over" href="">PlayStation</a>
+                <a class="over" href="">Xbox</a>
+                <a class="over" href="">Nintendo</a>
+            </div>
+            <div class="icon">
+                <a href="">
+                    <img class="overimg" src="../public/img/Icon/White/heart.svg" alt="icon">
+                </a>
+                <a href="">
+                    <img class="overimg" src="../public/img/Icon/White/shopping-basket.svg" alt="icon">
+                </a>
+                <a href="../public/index.php?p=users.login">
+                    <img class="overimg" src="../public/img/Icon/White/user.svg" alt="icon">
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <div>
-        <a href="index.php">
-            <img class="logo" src="../public/img/JoyW.svg" alt="logo">
-        </a>
-    </div>
-    <div class="categorie font24 police ligne">
-        <a href="">PlayStation</a>
-        <a href="">Xbox</a>
-        <a href="">Nintendo</a>
-    </div>
-    <div class="icon ligne">
-        <a href="">
-            <img class="icon-heart" src="../public/img/Wheart.svg" alt="icon">
-        </a>
-        <a href="">
-            <img class="icon-shop" src="../public/img/Wshopping-basket.svg" alt="icon">
-        </a>
-        <a href="">
-            <img class="icon-user" src="../public/img/Wuser.svg" alt="icon">
-        </a>
-    </div>
-</nav>
 
-<video autoplay muted loop>
-  <source src="../public/img/PS5.mp4" type="video/mp4">
-</video>
-
-<div class="container">
-
-    <div class="starter-template" style="padding-top: 100px;">
         <?= $content; ?>
+
     </div>
 
-</div><!-- /.container -->
+    <footer class="Footerrr">
+        <div class="LogoAndNew">
+            <img class="LogoFoot" src="../public/img/Logo/JoyW.svg" alt="logo">
+            <div class="News font24">
+                <p class="font20 policeCHAKRA">Rejoingnez-nous</p>
+                <div class="mail">
+                    <img src="../public/img/Icon/White/mail.svg" alt="icon-mail">
+                    <p class="font16 policeCHAKRA">Entrer votre email</p>
+                </div>
+                <button class="boutonFooter font16 policeCHAKRA">
+                    S’inscrire
+                </button>
+            </div>
+        </div>
+        <div class="en-savoir-plus">
+            <div class="contenuFoot">
+                <p class="titreFoot font20 CHAKRAMedium">Informations</p>
+                <div class="info font16 policeCHAKRA">
+                    <a class="over" href="">Qui sommes-nous ?</a>
+                    <a class="over" href="">Conditions générales</a>
+                    <a class="over" href="">Mentions légales</a>
+                    <a class="over" href="">Aide</a>
+                    <a class="over" href="">CGV</a>
+                </div>
+            </div>
+            <div class="contenuFoot">
+                <p class="titreFoot font20 CHAKRAMedium">Nos Engagements</p>
+                <div class="info font16 policeCHAKRA">
+                    <a class="over" href="">Paiement sécuriser</a>
+                    <a class="over" href="">Livraison en 48h</a>
+                    <a class="over" href="">Frais de port</a>
+                    <a class="over" href="">Contact 7j/7</a>
+                </div>
+            </div>
+            <div class="contenuFoot">
+                <p class="titreFoot font20 CHAKRAMedium">Moyens de paiements</p>
+                <div class="infoPaiement font16 policeCHAKRA">
+                    <img src="../public/img/Icon/White/paypal.svg" alt="icon-paypal">
+                    <img src="../public/img/Icon/White/visa.svg" alt="icon-visa">
+                    <img src="../public/img/Icon/White/mastercard.svg" alt="icon-mastercard">
+                </div>
+            </div>
+            <div class="Contacter">
+                <p class="CHAKRAMedium font20">Contactez-nous</p>
+                <div class="contact policeCHAKRA font16">
+                    <img src="../public/img/Icon/White/phone.svg" alt="phone">
+                    <p>+33 2 22 22 22 22</p>
+                </div>
+                <div class="contact policeCHAKRA font16">
+                    <img src="../public/img/Icon/White/mail.svg" alt="mail">
+                    <p>CeciEstUn@Email.com</p>
+                </div>
+                <div class="Btn-contact">
+                    <button href="../public/index.php?p=posts.contact" class="boutonFooter policeCHAKRA font16">Contacter</button>
+                </div>
+                <div class="reseau">
+                    <a href=""><img class="overimg" src="../public/img/Icon/White/facebook.svg" alt="facebook"></a>
+                    <a href=""><img class="overimg" src="../public/img/Icon/White/youtube.svg" alt="youtube"></a>
+                    <a href=""><img class="overimg" src="../public/img/Icon/White/instagram.svg" alt="instagram"></a>
+                    <a href=""><img class="overimg" src="../public/img/Icon/White/twitter.svg" alt="twitter"></a>
+                </div>
+            </div>
+        </div>
 
-<footer class="Foot ligne centre">
-    <div class="LogN ligne colonne">
-        <img class="logoF" src="../public/img/JoyB.svg" alt="logo">
-        <div class="News font24">
-            <p class="font20 police">Rejoingnez-nous</p>
-            <div class="mail ligne">
-                <img src="../public/img/mail.svg" alt="icon-mail">
-                <p class="font16 police">Entrer votre email</p>
-            </div>
-            <button class="font16 police boutonF">
-                S’inscrire
-            </button>
-        </div>
-    </div>
-    <div class="en-savoir-plus ligne">
-        <div class="autreF">
-            <p class="font20 policegras titFoot">Informations</p>
-            <div class="info font16 police">
-                <p>Qui sommes-nous ?</p>
-                <p>Conditions générales</p>
-                <p>Mentions légales</p>
-                <p>Aide</p>
-                <p>CGV</p>
-            </div>
-        </div>
-        <div class="autreF">
-            <p class="font20 policegras titFoot">Nos Engagements</p>
-            <div class="info font16 police">
-                <p>Paiement sécuriser</p>
-                <p>Livraison en 48h</p>
-                <p>Frais de port</p>
-                <p>Contact 7j/7</p>
-            </div>
-        </div>
-        <div class="autreF">
-            <p class="font20 policegras titFoot">Moyens de paiements</p>
-            <div class="info font16 police">
-                <img src="../public/img/paypal.svg" alt="icon-paypal">
-                <img src="../public/img/visa.svg" alt="icon-visa">
-                <img src="../public/img/mastercard.svg" alt="icon-mastercard">
-            </div>
-        </div>
-        <div class="ligne colonne">
-            <p class="policegras font20 titFoot">Contactez-nous</p>
-            <div class="police font16 contact ligne">
-                <img src="../public/img/phone.svg" alt="phone">
-                <p>+33 2 22 22 22 22</p>
-            </div>
-            <div class="police font16 contact ligne">
-                <img src="../public/img/mail.svg" alt="mail">
-                <p>CeciEstUn@Email.com</p>
-            </div>
-            <div class="ligne centre">
-                <button class="police font16 boutonF contacter">Contacter</button>
-            </div>
-            <div class="ligne reseau">
-                <img src="../public/img/facebook.svg" alt="facebook">
-                <img src="../public/img/youtube.svg" alt="youtube">
-                <img src="../public/img/instagram.svg" alt="instagram">
-                <img src="../public/img/twitter.svg" alt="twitter">
-            </div>
-        </div>
-    </div>
-
-</footer>
+    </footer>
 
 
 </body>
+
 </html>

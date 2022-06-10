@@ -34,4 +34,8 @@ class PostsController extends AppController{
         $this->render('posts.show', compact('article'));
     }
 
+    public function contact(){
+        $this->render('posts.contact');
+    }
+
 }

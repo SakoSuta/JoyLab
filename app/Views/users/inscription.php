@@ -4,6 +4,7 @@
     </div>
 <?php endif; ?>
 
+<p>inscription</p>
 <form method="post">
     <div class="row">
       <div class="col-lg-6 col-12">

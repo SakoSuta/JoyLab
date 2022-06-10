@@ -1,0 +1,171 @@
+.Compte {
+  .MonCompte {
+    margin-top: 103px;
+    margin-left: 67px;
+    margin-bottom: 98px;
+    color: $bleu;
+  }
+
+  .Titre {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .Erreur {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(212, 59, 59);
+  }
+
+  .TousCompte {
+    width: 70%;
+    max-width: 1150px;
+    display: flex;
+    align-items: center;
+
+    .signUp {
+      background-color: $bleu;
+      border-radius: 10px;
+
+      .TitreSignUp-In {
+        color: $vert;
+      }
+
+      .FormSignUp {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        form {
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 396px;
+
+          .FNameLName {
+              display: flex;
+              justify-content: center;
+            .InfoInput {
+              background-color: $blanc;
+              max-width: 396px;
+              margin: 15px;
+
+              input {
+                width: 100%;
+                border: 0px;
+                color: $bleu;
+                background-color: transparent;
+              }
+            }
+          }
+
+          .AutreInfo {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+            .InfoInput {
+              background-color: $blanc;
+              max-width: 396px;
+              margin: 15px;
+
+              img {
+                max-width: 22px;
+                margin-left: 20px;
+              }
+
+              input {
+                width: 100%;
+                padding-left: 20px;
+                border: 0px;
+                border-left-width: 1px;
+                border-left-style: solid;
+                color: $bleu;
+                background-color: transparent;
+              }
+            }
+          }
+
+          .sinscrire {
+            color: $bleu;
+            width: 80%;
+            max-width: 242px;
+            background-color: $blanc;
+            border-radius: 10px;
+            border: 0px;
+            padding: 15px 0px;
+            margin: 50px 0px;
+          }
+        }
+      }
+    }
+
+    .signIn {
+      background-color: $vert;
+      border-radius: 10px;
+      height: max-content;
+
+      .TitreSignUp-In {
+        color: $bleu;
+      }
+
+      .FormSignIn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        form {
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 396px;
+
+          .InfoInput {
+            background-color: $bleu;
+            max-width: 396px;
+            margin: 15px;
+
+            img {
+              max-width: 22px;
+              margin-left: 20px;
+            }
+
+            input {
+              width: 100%;
+              padding-left: 20px;
+              border: 0px;
+              border-left-width: 1px;
+              border-left-style: solid;
+              color: $blanc;
+              background-color: transparent;
+            }
+          }
+
+          .Connected {
+            color: $blanc;
+            width: 80%;
+            max-width: 242px;
+            background-color: $bleu;
+            border-radius: 10px;
+            border: 0px;
+            padding: 15px 0px;
+            margin: 50px 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.InputInf {
+  color: $bleu;
+  margin: 18px;
+}
+
+.TitreSignUp-In {
+  text-align: center;
+  margin: 50px 0px;
+}

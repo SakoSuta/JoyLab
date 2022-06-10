@@ -1,139 +1,206 @@
-.html {
-  background-color: #26142F;
+.contenuNav,
+.categorieNav,
+.icon,
+.Footerrr,
+.LogoAndNew,
+.mail,
+.en-savoir-plus,
+.info,
+.infoPaiement,
+.Contacter,
+.contact,
+.reseau,
+.Btn-contact,
+.CategorieAc,
+.autreCategorie,
+.emilie,
+.ContenuMeilAchat,
+.passe,
+.MeilleurArticle,
+.Compte,
+.TousCompte, .InfoInput, .Titre {
+  display: flex;
 }
 
-.logo {
+.info,
+.Contacter,
+.autreCategorie,
+.LogoAndNew,
+.Compte {
+  flex-direction: column;
+}
+
+.Btn-contact,
+.Footerrr,
+.CategorieAc,
+.emilie,
+.LogoAndNew,
+.TousCompte {
+  justify-content: center;
+}
+
+.ContenuMeilAchat,
+.Compte {
+  align-items: center;
+}
+
+.categorieNav,
+.icon {
+  align-items: end;
+}
+
+.Titre {
+  align-items: start;
+}
+
+.contenuNav,
+.categorieNav,
+.icon,
+.Footerrr,
+.en-savoir-plus,
+.ContenuMeilAchat,
+.MeilleurArticle,
+.TousCompte {
+  justify-content: space-between;
+}
+
+.InfoInput {
+  border-radius: 10px;
+}
+
+html {
+  background-color: #CED8E2;
+}
+
+.navig {
+  width: 100%;
+  height: 130px;
+  background-color: #112B3D;
+}
+.navig .LogoNav {
   margin: 29px 0px 0px 69px;
   width: 159px;
   height: 64px;
 }
-
-.icon-heart {
-  width: 29.71px;
-  height: 29.71px;
+.navig .categorieNav {
+  width: 50%;
+  max-width: 391px;
 }
-
-.icon-shop {
-  width: 29.71px;
-  height: 26.15px;
-}
-
-.icon-user {
-  width: 29.71px;
-  height: 29.71px;
-}
-
-.navig {
-  background: linear-gradient(180deg, rgba(8, 166, 137, 0.25) 0%, rgba(8, 166, 137, 0) 100%);
-  position: fixed;
-}
-
-.categorie {
-  margin: 0vh 52.5vh;
-  align-items: end;
-}
-.categorie a {
+.navig .categorieNav a {
   text-decoration: none;
-  padding: 20px;
-  color: #fff;
+  color: #CED8E2;
+}
+.navig .icon {
+  width: 50%;
+  max-width: 106px;
+  margin-right: 62px;
 }
 
-.icon {
-  align-items: end;
-}
-.icon a {
-  padding: 6.74px;
-}
-
-video {
+.Footerrr {
   width: 100%;
-  height: 100%;
-}
-
-.container {
-  height: 100%;
-}
-
-.Foot {
-  background-color: #BFBFBF;
+  background-color: #112B3D;
   margin-top: 126px;
 }
-
-.LogN {
+.Footerrr .LogoAndNew {
   margin-left: 60px;
-  margin-right: 155px;
+  margin-top: 30px;
 }
-
-.logoF {
+.Footerrr .LogoAndNew .LogoFoot {
   width: 157px;
   height: 64px;
-  margin-top: 27px;
 }
-
-.News {
+.Footerrr .LogoAndNew .News {
   margin: 31px 0px;
+  color: #CED8E2;
 }
-
-.mail {
+.Footerrr .LogoAndNew .News .mail {
   align-items: end;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #CED8E2;
   padding: 5px;
   margin-top: 16px;
-  margin-bottom: 40px;
   width: 209.01px;
 }
-.mail img {
+.Footerrr .LogoAndNew .News .mail img {
   margin-right: 26px;
 }
-
-.en-savoir-plus {
-  margin-right: 118px;
+.Footerrr .en-savoir-plus {
   margin-top: 48px;
+  margin-right: 134px;
 }
-
-.titFoot {
-  margin-bottom: 20px;
-}
-
-.autreF {
+.Footerrr .en-savoir-plus .contenuFoot {
   margin-right: 88px;
 }
-
-.info p {
+.Footerrr .en-savoir-plus .contenuFoot .titreFoot {
+  margin-bottom: 20px;
+  color: #CED8E2;
+}
+.Footerrr .en-savoir-plus .contenuFoot .info a {
+  text-decoration: none;
+  color: #CED8E2;
   margin-bottom: 14px;
 }
-.info img {
+.Footerrr .en-savoir-plus .contenuFoot .infoPaiement img {
+  width: 31px;
+  height: 21px;
   margin-right: 16px;
 }
-
-.contact {
-  margin-bottom: 14px;
-  align-items: end;
+.Footerrr .en-savoir-plus .Contacter p {
+  color: #CED8E2;
 }
-.contact img {
+.Footerrr .en-savoir-plus .Contacter .contact {
+  margin-top: 14px;
+}
+.Footerrr .en-savoir-plus .Contacter .contact img {
+  width: 20px;
+  height: 20px;
   margin-right: 20px;
 }
-
-.contacter {
-  margin-top: 5px;
-}
-
-.reseau {
-  margin-top: 36px;
+.Footerrr .en-savoir-plus .Contacter .reseau {
+  margin: 25px 0px;
   align-items: end;
 }
-.reseau img {
+.Footerrr .en-savoir-plus .Contacter .reseau img {
   margin-right: 14px;
 }
 
-.police {
-  font-family: "Glory", sans-serif;
+.boutonFooter {
+  margin-top: 27px;
+  width: 110px;
+  height: 30px;
+  background-color: #CED8E2;
+  color: #112B3D;
+  border: 0px;
+  border-radius: 33px;
+}
+
+.policeCHAKRA {
+  font-family: "Chakra Petch", sans-serif;
   font-weight: 300;
 }
 
-.policegras {
-  font-family: "Glory", sans-serif;
+.policeIBM {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+}
+
+.CHAKRAMedium {
+  font-family: "Chakra Petch", sans-serif;
   font-weight: 500;
+}
+
+.IBMMedium {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+}
+
+.CHAKRASemiBold {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+}
+
+.CHAKRABold {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
 }
 
 .font16 {
@@ -148,25 +215,229 @@ video {
   font-size: 24px;
 }
 
-.ligne {
+.font32 {
+  font-size: 32px;
+}
+
+.font40 {
+  font-size: 40px;
+}
+
+.font48 {
+  font-size: 48px;
+}
+
+.centreV {
+  align-items: center;
+}
+
+.haut {
+  align-items: start;
+}
+
+.gauche {
+  justify-content: left;
+}
+
+.droite {
+  justify-content: right;
+}
+
+.over:hover {
+  font-weight: 600;
+}
+
+.overimg:hover {
+  transform: scale(1.2);
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  background-color: #CED8E2;
+}
+
+.CategorieAc {
+  margin: 76px 0px;
+}
+.CategorieAc .autreCategorie {
+  margin-left: 19px;
+}
+.CategorieAc .autreCategorie .motifs {
+  margin-bottom: 17px;
+}
+
+.MeilleursAchats {
+  background-color: #112B3D;
+}
+.MeilleursAchats .NosMeilAchat {
+  color: #CED8E2;
+  margin-top: 40px;
+  margin-left: 70px;
+  margin-bottom: 37px;
+}
+.MeilleursAchats .ContenuMeilAchat {
+  margin-bottom: 56px;
+  width: 100%;
+  max-width: 1380px;
+}
+.MeilleursAchats .ContenuMeilAchat .passe {
+  margin: 0px 55px;
+}
+.MeilleursAchats .ContenuMeilAchat .MeilleurArticle {
+  width: 70%;
+  max-width: 1080px;
+}
+
+.Compte .MonCompte {
+  margin-top: 103px;
+  margin-left: 67px;
+  margin-bottom: 98px;
+  color: #112B3D;
+}
+.Compte .Titre {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.Compte .Erreur {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgb(212, 59, 59);
+}
+.Compte .TousCompte {
+  width: 70%;
+  max-width: 1150px;
   display: flex;
+  align-items: center;
 }
-
-.colonne {
-  flex-direction: column;
+.Compte .TousCompte .signUp {
+  background-color: #112B3D;
+  border-radius: 10px;
 }
-
-.centre {
+.Compte .TousCompte .signUp .TitreSignUp-In {
+  color: #1CC9A1;
+}
+.Compte .TousCompte .signUp .FormSignUp {
+  width: 100%;
+  display: flex;
   justify-content: center;
 }
-
-.boutonF {
-  width: 110px;
-  height: 30px;
-  background-color: #000;
-  color: #fff;
+.Compte .TousCompte .signUp .FormSignUp form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 396px;
+}
+.Compte .TousCompte .signUp .FormSignUp form .FNameLName {
+  display: flex;
+  justify-content: center;
+}
+.Compte .TousCompte .signUp .FormSignUp form .FNameLName .InfoInput {
+  background-color: #CED8E2;
+  max-width: 396px;
+  margin: 15px;
+}
+.Compte .TousCompte .signUp .FormSignUp form .FNameLName .InfoInput input {
+  width: 100%;
   border: 0px;
-  border-radius: 33px;
+  color: #112B3D;
+  background-color: transparent;
+}
+.Compte .TousCompte .signUp .FormSignUp form .AutreInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Compte .TousCompte .signUp .FormSignUp form .AutreInfo .InfoInput {
+  background-color: #CED8E2;
+  max-width: 396px;
+  margin: 15px;
+}
+.Compte .TousCompte .signUp .FormSignUp form .AutreInfo .InfoInput img {
+  max-width: 22px;
+  margin-left: 20px;
+}
+.Compte .TousCompte .signUp .FormSignUp form .AutreInfo .InfoInput input {
+  width: 100%;
+  padding-left: 20px;
+  border: 0px;
+  border-left-width: 1px;
+  border-left-style: solid;
+  color: #112B3D;
+  background-color: transparent;
+}
+.Compte .TousCompte .signUp .FormSignUp form .sinscrire {
+  color: #112B3D;
+  width: 80%;
+  max-width: 242px;
+  background-color: #CED8E2;
+  border-radius: 10px;
+  border: 0px;
+  padding: 15px 0px;
+  margin: 50px 0px;
+}
+.Compte .TousCompte .signIn {
+  background-color: #1CC9A1;
+  border-radius: 10px;
+  height: max-content;
+}
+.Compte .TousCompte .signIn .TitreSignUp-In {
+  color: #112B3D;
+}
+.Compte .TousCompte .signIn .FormSignIn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Compte .TousCompte .signIn .FormSignIn form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 396px;
+}
+.Compte .TousCompte .signIn .FormSignIn form .InfoInput {
+  background-color: #112B3D;
+  max-width: 396px;
+  margin: 15px;
+}
+.Compte .TousCompte .signIn .FormSignIn form .InfoInput img {
+  max-width: 22px;
+  margin-left: 20px;
+}
+.Compte .TousCompte .signIn .FormSignIn form .InfoInput input {
+  width: 100%;
+  padding-left: 20px;
+  border: 0px;
+  border-left-width: 1px;
+  border-left-style: solid;
+  color: #CED8E2;
+  background-color: transparent;
+}
+.Compte .TousCompte .signIn .FormSignIn form .Connected {
+  color: #CED8E2;
+  width: 80%;
+  max-width: 242px;
+  background-color: #112B3D;
+  border-radius: 10px;
+  border: 0px;
+  padding: 15px 0px;
+  margin: 50px 0px;
+}
+
+.InputInf {
+  color: #112B3D;
+  margin: 18px;
+}
+
+.TitreSignUp-In {
+  text-align: center;
+  margin: 50px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

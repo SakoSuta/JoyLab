@@ -1,220 +1,291 @@
-.html
-{
-    background-color: #26142F;
+.contenuNav,
+.categorieNav,
+.icon,
+.Footerrr,
+.LogoAndNew,
+.mail,
+.en-savoir-plus,
+.info,
+.infoPaiement,
+.Contacter,
+.contact,
+.reseau,
+.Btn-contact,
+.CategorieAc,
+.autreCategorie,
+.emilie,
+.ContenuMeilAchat,
+.passe,
+.MeilleurArticle,
+.Compte,
+.TousCompte,.InfoInput,.Titre{
+  display: flex;
 }
 
-.logo
-{
+.info,
+.Contacter,
+.autreCategorie,
+.LogoAndNew,
+.Compte {
+  flex-direction: column;
+}
+
+.Btn-contact,
+.Footerrr,
+.CategorieAc,
+.emilie,
+.LogoAndNew,
+.TousCompte {
+  justify-content: center;
+}
+
+.ContenuMeilAchat,
+.Compte {
+  align-items: center;
+}
+
+.categorieNav,
+.icon {
+  align-items: end;
+}
+
+.Titre{
+  align-items: start;
+}
+
+.contenuNav,
+.categorieNav,
+.icon,
+.Footerrr,
+.en-savoir-plus,
+.ContenuMeilAchat,
+.MeilleurArticle,
+.TousCompte {
+  justify-content: space-between;
+}
+
+.InfoInput{
+  border-radius: 10px;
+}
+
+html {
+  background-color: $blanc;
+}
+
+//--Nav--//
+
+.navig {
+  width: 100%;
+  height: 130px;
+  background-color: $bleu;
+  // position: fixed;
+  .LogoNav {
     margin: 29px 0px 0px 69px;
     width: 159px;
     height: 64px;
-}
+  }
+  .categorieNav {
+    width: 50%;
+    max-width: 391px;
 
-.icon-heart
-{
-    width: 29.71px;
-    height: 29.71px;
-}
-.icon-shop
-{
-    width: 29.71px;
-    height: 26.15px;
-}
-.icon-user
-{
-    width: 29.71px;
-    height: 29.71px;
-}
-
-.navig
-{
-    background: linear-gradient(180deg, rgba(8, 166, 137, 0.25) 0%, rgba(8, 166, 137, 0) 100%);
-    position: fixed;
-}
-
-.categorie
-{
-    margin: 0vh 52.5vh;
-    align-items: end;
-    
-    a
-    {
-        text-decoration: none;
-        padding: 20px;
-        color: #fff;
+    a {
+      text-decoration: none;
+      color: $blanc;
     }
-}
-
-.icon
-{
-    align-items: end;
-    a
-    {
-        padding: 6.74px;
-    }
-}
-
-video
-{
-    width: 100%;
-    height: 100%;
-}
-
-.container
-{
-    height: 100%;
+  }
+  .icon {
+    width: 50%;
+    max-width: 106px;
+    margin-right: 62px;
+  }
 }
 
 //--Footer--//
 
-.Foot
-{
-    background-color: #BFBFBF;
-    margin-top: 126px;
-}
+.Footerrr {
+  width: 100%;
+  background-color: $bleu;
+  margin-top: 126px;
 
-.LogN
-{
+  .LogoAndNew {
     margin-left: 60px;
-    margin-right: 155px;
-}
+    margin-top: 30px;
 
-.logoF
-{
-    width: 157px;
-    height: 64px;
-    margin-top: 27px;
-}
-
-.News
-{
-    margin: 31px 0px;
-}
-
-.mail
-{
-    align-items: end;
-    border-bottom: 2px solid #000;
-    padding: 5px;
-    margin-top: 16px;
-    margin-bottom: 40px;
-    width: 209.01px;
-
-    img
-    {
-        margin-right: 26px;
+    .LogoFoot {
+      width: 157px;
+      height: 64px;
     }
-}
+    .News {
+      margin: 31px 0px;
+      color: $blanc;
 
-.en-savoir-plus
-{
-    margin-right: 118px;
+      .mail {
+        align-items: end;
+        border-bottom: 2px solid $blanc;
+        padding: 5px;
+        margin-top: 16px;
+        width: 209.01px;
+
+        img {
+          margin-right: 26px;
+        }
+      }
+    }
+  }
+  .en-savoir-plus {
     margin-top: 48px;
-}
+    margin-right: 134px;
 
-.titFoot
-{
-    margin-bottom: 20px;
-}
+    .contenuFoot {
+      margin-right: 88px;
 
-.autreF
-{
-    margin-right: 88px;
-}
+      .titreFoot {
+        margin-bottom: 20px;
+        color: $blanc;
+      }
 
+      .info {
+        a {
+          text-decoration: none;
+          color: $blanc;
+          margin-bottom: 14px;
+        }
+      }
 
-.info
-{
-    p
-    {
-        margin-bottom: 14px;
+      .infoPaiement {
+        img {
+          width: 31px;
+          height: 21px;
+          margin-right: 16px;
+        }
+      }
     }
 
-    img
-    {
-        margin-right: 16px;
+    .Contacter {
+      p {
+        color: $blanc;
+      }
+
+      .contact {
+        margin-top: 14px;
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 20px;
+        }
+      }
+
+      // .Btn-contact{
+
+      // }
+
+      .reseau {
+        margin: 25px 0px;
+        align-items: end;
+
+        img {
+          margin-right: 14px;
+        }
+      }
     }
+  }
 }
 
-.contact
-{
-    margin-bottom: 14px;
-    align-items: end;
-
-    img
-    {
-        margin-right: 20px;
-    }
-}
-
-.contacter
-{
-    margin-top: 5px;
-}
-
-.reseau
-{
-    margin-top: 36px;
-    align-items: end;
-
-    img
-    {
-        margin-right: 14px;
-    }
+.boutonFooter {
+  margin-top: 27px;
+  width: 110px;
+  height: 30px;
+  background-color: $blanc;
+  color: $bleu;
+  border: 0px;
+  border-radius: 33px;
 }
 
 //--Typo--//
 
-.police
-{
-    font-family: 'Glory', sans-serif;
-    font-weight: 300;
+.policeCHAKRA {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 300;
 }
 
-.policegras
-{
-    font-family: 'Glory', sans-serif;
-    font-weight: 500;
+.policeIBM {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
 }
 
-.font16
-{
-    font-size: 16px;
+.CHAKRAMedium {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 500;
 }
 
-.font20
-{
-    font-size: 20px;
+.IBMMedium {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
 }
 
-.font24
-{
-    font-size: 24px;
+.CHAKRASemiBold {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+}
+
+.CHAKRABold {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+}
+
+.font16 {
+  font-size: 16px;
+}
+
+.font20 {
+  font-size: 20px;
+}
+
+.font24 {
+  font-size: 24px;
+}
+
+.font32 {
+  font-size: 32px;
+}
+
+.font40 {
+  font-size: 40px;
+}
+
+.font48 {
+  font-size: 48px;
 }
 
 //--organisation--//
 
-.ligne
-{
-    display: flex;
+.centreV {
+  align-items: center;
 }
 
-.colonne
-{
-    flex-direction: column;
+.haut {
+  align-items: start;
 }
 
-.centre
-{
-    justify-content: center;
+.gauche {
+  justify-content: left;
 }
 
-.boutonF
-{
-    width: 110px;
-    height: 30px;
-    background-color: #000;
-    color: #fff;
-    border: 0px;
-    border-radius: 33px;
+.droite {
+  justify-content: right;
+}
+
+.over:hover {
+  font-weight: 600;
+}
+
+.overimg:hover {
+  transform: scale(1.2);
+  //changer la couleur #1CC9A1
+}
+
+video {
+  width: 100%;
+  height: 100%;
 }
