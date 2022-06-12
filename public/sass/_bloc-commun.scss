@@ -59,8 +59,7 @@
 .Footerrr,
 .en-savoir-plus,
 .ContenuMeilAchat,
-.MeilleurArticle,
-.TousCompte {
+.MeilleurArticle {
   justify-content: space-between;
 }
 
@@ -105,7 +104,6 @@ html {
 .Footerrr {
   width: 100%;
   background-color: $bleu;
-  margin-top: 126px;
 
   .LogoAndNew {
     margin-left: 60px;

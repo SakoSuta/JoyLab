@@ -31,7 +31,7 @@
                 <img class="LogoNav" src="../public/img/Logo/JoyW.svg" alt="logo">
             </a>
             <div class="categorieNav font24 policeIBM">
-                <a class="over" href="">PlayStation</a>
+                <a class="over" href="../public/index.php?p=posts.category">PlayStation</a>
                 <a class="over" href="">Xbox</a>
                 <a class="over" href="">Nintendo</a>
             </div>
@@ -108,7 +108,7 @@
                     <p>CeciEstUn@Email.com</p>
                 </div>
                 <div class="Btn-contact">
-                    <button href="../public/index.php?p=posts.contact" class="boutonFooter policeCHAKRA font16">Contacter</button>
+                    <a href="../public/index.php?p=posts.contact" class="boutonFooter policeCHAKRA font16">Contacter</a>
                 </div>
                 <div class="reseau">
                     <a href=""><img class="overimg" src="../public/img/Icon/White/facebook.svg" alt="facebook"></a>

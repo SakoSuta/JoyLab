@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Core\Controller\Controller;
+use Core\HTML\BootstrapForm;
 
 class PostsController extends AppController{
 
@@ -35,7 +36,8 @@ class PostsController extends AppController{
     }
 
     public function contact(){
-        $this->render('posts.contact');
+        $form = new BootstrapForm($_POST);
+        $this->render('posts.contact', compact('form'));
     }
 
 }

@@ -59,8 +59,7 @@
 .Footerrr,
 .en-savoir-plus,
 .ContenuMeilAchat,
-.MeilleurArticle,
-.TousCompte {
+.MeilleurArticle {
   justify-content: space-between;
 }
 
@@ -99,7 +98,6 @@ html {
 .Footerrr {
   width: 100%;
   background-color: #112B3D;
-  margin-top: 126px;
 }
 .Footerrr .LogoAndNew {
   margin-left: 60px;
@@ -292,6 +290,9 @@ main {
   max-width: 1080px;
 }
 
+.Compte {
+  margin-bottom: 126px;
+}
 .Compte .MonCompte {
   margin-top: 103px;
   margin-left: 67px;
@@ -312,6 +313,7 @@ main {
   max-width: 1150px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .Compte .TousCompte .signUp {
   background-color: #112B3D;
@@ -438,6 +440,132 @@ main {
 .TitreSignUp-In {
   text-align: center;
   margin: 50px 0px;
+}
+
+.Contact {
+  display: flex;
+  justify-content: center;
+  margin: 126px 0px;
+}
+.Contact .ContenuContact {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+.Contact .ContenuContact .NumAndMail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Contact .ContenuContact .NumAndMail .ContenuNumMail {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Contact .ContenuContact .NumAndMail .ContenuNumMail .NumMailInfo {
+  height: 245px;
+  background-color: #112B3D;
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.Contact .ContenuContact .NumAndMail .ContenuNumMail .NumMailInfo p {
+  color: #CED8E2;
+}
+.Contact .ContenuContact .NousContacter {
+  background-color: #1CC9A1;
+  border-radius: 10px;
+  width: 841px;
+  height: 742px;
+  padding: 120px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.Contact .ContenuContact .NousContacter p {
+  margin-bottom: 50px;
+}
+.Contact .ContenuContact .NousContacter .FormContact {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+.Contact .ContenuContact .NousContacter .FormContact form {
+  width: 100%;
+}
+.Contact .ContenuContact .NousContacter .FormContact .CFirstLastName {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.Contact .ContenuContact .NousContacter .FormContact .CFirstLastName .InfoInputC {
+  background-color: #112B3D;
+  border-radius: 10px;
+  width: 45%;
+}
+.Contact .ContenuContact .NousContacter .FormContact .CFirstLastName .InfoInputC input {
+  max-width: 75%;
+  color: #CED8E2;
+  border: 0px;
+  background-color: transparent;
+}
+.Contact .ContenuContact .NousContacter .FormContact .CNumMail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.Contact .ContenuContact .NousContacter .FormContact .CNumMail .InfoInputC {
+  display: flex;
+  background-color: #112B3D;
+  border-radius: 10px;
+  width: 45%;
+}
+.Contact .ContenuContact .NousContacter .FormContact .CNumMail .InfoInputC img {
+  max-width: 22px;
+  margin-left: 20px;
+}
+.Contact .ContenuContact .NousContacter .FormContact .CNumMail .InfoInputC input {
+  max-width: 75%;
+  color: #CED8E2;
+  padding-left: 20px;
+  border: 0px;
+  border-left-width: 1px;
+  border-left-style: solid;
+  background-color: transparent;
+}
+.Contact .ContenuContact .NousContacter .FormContact .Message {
+  margin-bottom: 30px;
+}
+.Contact .ContenuContact .NousContacter .FormContact .Message .InfoInputC textarea {
+  min-width: 100%;
+  min-height: 60px;
+  max-width: 100%;
+  max-height: 240px;
+  padding: 15px;
+  background-color: #112B3D;
+  border-radius: 10px;
+  color: #CED8E2;
+  width: 100%;
+  height: 144px;
+  border: 0px;
+}
+.Contact .ContenuContact .NousContacter .FormContact .CEnvoyer {
+  display: flex;
+  justify-content: center;
+}
+.Contact .ContenuContact .NousContacter .FormContact .CEnvoyer .Envoyer {
+  background-color: #112B3D;
+  color: #CED8E2;
+  width: 80%;
+  max-width: 242px;
+  border: 0px;
+  border-radius: 10px;
+  padding: 13px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
