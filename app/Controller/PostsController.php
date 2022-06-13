@@ -20,6 +20,10 @@ class PostsController extends AppController{
         $this->render('posts.index', compact('posts', 'categories'));
     }
 
+    public function categoryAppareil(){
+        $this->render('posts.categoryAppareil');
+    }
+
     public function category(){
         $categorie = $this->Category->find($_GET['id']);
         if($categorie === false){

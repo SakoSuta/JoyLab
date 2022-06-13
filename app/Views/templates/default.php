@@ -11,7 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 
     <title><?= App::getInstance()->title; ?></title>
@@ -31,7 +31,7 @@
                 <img class="LogoNav" src="../public/img/Logo/JoyW.svg" alt="logo">
             </a>
             <div class="categorieNav font24 policeIBM">
-                <a class="over" href="../public/index.php?p=posts.category">PlayStation</a>
+                <a class="over" href="../public/index.php?p=posts.categoryAppareil">PlayStation</a>
                 <a class="over" href="">Xbox</a>
                 <a class="over" href="">Nintendo</a>
             </div>
