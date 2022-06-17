@@ -688,60 +688,66 @@ main {
 
 .Panier {
   width: 100%;
-  margin: 130px 0px;
+  margin-bottom: 130px;
 }
 .Panier .InfoPanier {
   color: #112B3D;
-  margin: 80px 0px;
+  margin-top: 103px;
+  margin-left: 67px;
+  margin-bottom: 98px;
 }
 .Panier .ContenuPanier {
   background-color: #112B3D;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 72px 42px;
 }
 .Panier .ContenuPanier .TableauPanier {
-  padding: 72px 0px;
-  width: 90%;
+  height: max-content;
   display: flex;
-  justify-content: space-between;
-}
-.Panier .ContenuPanier .TableauPanier Table {
-  width: 818px;
-  background-color: #CED8E2;
   border: 4px solid #1CC9A1;
   border-radius: 10px;
 }
-.Panier .ContenuPanier .TableauPanier Table thead {
-  border: 4px solid #1CC9A1;
-}
-.Panier .ContenuPanier .TableauPanier Table thead tr th {
-  border: 4px solid #1CC9A1;
-  padding: 25px 0px;
-}
-.Panier .ContenuPanier .TableauPanier Table tbody tr {
-  border: 4px solid #1CC9A1;
-}
-.Panier .ContenuPanier .TableauPanier Table tbody tr td {
-  border: 4px solid #1CC9A1;
-}
-.Panier .ContenuPanier .TableauPanier Table tbody tr td .ContenuProduit {
-  padding: 20px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.Panier .ContenuPanier .TableauPanier Table tbody tr td .ContenuProduit .Info img {
-  width: 200px;
-  margin-bottom: 10px;
-}
-.Panier .ContenuPanier .TableauPanier Table tbody tr td .ContenuProduit .Info .InfoProduit {
+.Panier .ContenuPanier .TableauPanier .Colonne {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.Panier .ContenuPanier .TableauPanier Table tbody tr td .ContenuProduit .Info .InfoProduit .Article {
-  padding-bottom: 15px;
+.Panier .ContenuPanier .TableauPanier .Colonne .TProduits {
+  background-color: #CED8E2;
+  border-bottom: 4px solid #1CC9A1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Panier .ContenuPanier .TableauPanier .Colonne .TProduits p {
+  padding: 25px 50px;
+}
+.Panier .ContenuPanier .TableauPanier .Colonne .Produit {
+  background-color: #CED8E2;
+  padding: 32px 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Panier .ContenuPanier .TableauPanier .Colonne .Produit .ImgProduit {
+  background-color: #112B3D;
+  border-radius: 10px;
+  margin-right: 23px;
+  width: 110.59px;
+  height: 182px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Panier .ContenuPanier .TableauPanier .Colonne .Produit .ImgProduit img {
+  width: 100%;
+}
+.Panier .ContenuPanier .TableauPanier .Colonne .Produit .InfoProduit .TitreProduit {
+  margin-bottom: 40px;
 }
 .Panier .ContenuPanier .Resum {
   width: 490px;

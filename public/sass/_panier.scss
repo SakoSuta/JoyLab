@@ -1,65 +1,71 @@
 .Panier {
   width: 100%;
-  margin: 130px 0px;
+  margin-bottom: 130px;
   .InfoPanier {
     color: $bleu;
-    margin: 80px 0px;
+    margin-top: 103px;
+    margin-left: 67px;
+    margin-bottom: 98px;
   }
 
   .ContenuPanier {
     background-color: $bleu;
     width: 100%;
     display: flex;
-    justify-content: center;
-    .TableauPanier {
-      padding: 72px 0px;
-      width: 90%;
-      display: flex;
-      justify-content: space-between;
-      Table {
-        width: 818px;
-        background-color: $blanc;
-        border: 4px solid $vert;
-        border-radius: 10px;
+    justify-content: space-between;
+    padding: 72px 42px;
 
-        thead {
-          border: 4px solid $vert;
-          tr {
-            th {
-              border: 4px solid $vert;
-              padding: 25px 0px;
-            }
+    .TableauPanier {
+      height: max-content;
+      display: flex;
+      border: 4px solid $vert;
+      border-radius: 10px;
+
+      .Colonne{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .TProduits{
+          background-color: $blanc;
+          border-bottom: 4px solid $vert;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          
+          p{
+            padding: 25px 50px;
           }
         }
 
-        tbody {
-          tr {
-            border: 4px solid $vert;
-            td {
-              border: 4px solid $vert;
-              .ContenuProduit {
-                padding: 20px 0px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+        .Produit{
+          background-color: $blanc;
+          padding: 32px 20px;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
-                .Info {
-                  img {
-                    width: 200px;
-                    margin-bottom: 10px;
-                  }
+          .ImgProduit{
+            background-color: $bleu;
+            border-radius: 10px;
+            margin-right: 23px;
+            width: 110.59px;
+            height: 182px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            img{
+              width: 100%;
+            }
+          }
 
-                  .InfoProduit {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
+          .InfoProduit{
 
-                    .Article {
-                      padding-bottom: 15px;
-                    }
-                  }
-                }
-              }
+            .TitreProduit{
+              margin-bottom: 40px;
             }
           }
         }
