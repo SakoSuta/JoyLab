@@ -15,9 +15,10 @@ class UsersController extends AppController {
 
     public function login(){
         $errors = false;
+        $errorss = false;
         if(!empty($_POST)){
             $auth = new DBAuth(App::getInstance()->getDb());
-            if($auth->login($_POST['username'], $_POST['password'])){
+            if($auth->login($_POST['email'], $_POST['password'])){
                 if($_SESSION['user']->role === 'ROLE_ADMIN'){
                     // champ user 'role' administrateur
                     header('Location: index.php?p=admin.posts.index');
@@ -26,11 +27,11 @@ class UsersController extends AppController {
                     header('Location: index.php');
                 }
             } else {
-                $errors = true;
+                $errorss = true;
             }
         }
         $form = new BootstrapForm($_POST);
-        $this->render('users.login', compact('form', 'errors'));
+        $this->render('users.login', compact('form', 'errorss'));
     }
 
     /*
@@ -50,13 +51,11 @@ class UsersController extends AppController {
         $messageError = null;
 
         if(!empty($_POST)){
+            var_dump($_POST);
             // Vérification des champs de manière générale
             if(empty($_POST['firstname']) || 
                empty($_POST['lastname']) || 
                empty($_POST['email']) ||
-               empty($_POST['emailVerif']) ||
-               empty($_POST['tel']) ||
-               empty($_POST['username']) ||
                empty($_POST['password']) ||
                empty($_POST['passwordVerif'])
                ){
@@ -64,19 +63,20 @@ class UsersController extends AppController {
                 $messageError = "Veuillez remplir tous les champs";
             }else{
 
-                if($_POST['email'] != $_POST['emailVerif']){
-                    $errors = true;
-                    $messageError = "Les champs d'email sont incorrect";
-                }
+                // if($_POST['email'] != $_POST['emailVerif']){
+                //     $errors = true;
+                //     $messageError = "Les champs d'email sont incorrect";
+                // }
+
                 if($_POST['password'] != $_POST['passwordVerif']){
                     $errors = true;
                     $messageError = "Les champs de password sont incorrect";
                 }
 
-                if(strlen($_POST['tel']) < 10){
-                    $errors = true;
-                    $messageError = "Le champ de téléphone doit comporter 10 chiffres";
-                }
+                // if(strlen($_POST['tel']) < 10){
+                //     $errors = true;
+                //     $messageError = "Le champ de téléphone doit comporter 10 chiffres";
+                // }
 
                 if(!$errors){
                     $this->registration($_POST);
@@ -84,7 +84,7 @@ class UsersController extends AppController {
             }
         }
         $form = new BootstrapForm($_POST);
-        $this->render('users.inscription', compact('form', 'errors', 'messageError'));
+        $this->render('users.login', compact('form', 'errors', 'messageError'));
     }
 
     /*
@@ -93,11 +93,9 @@ class UsersController extends AppController {
     public function registration($donnees){
         if (!empty($donnees)) {
             $result = $this->User->create([
-                'username' => $_POST['username'],
                 'firstname' => $_POST['firstname'],
                 'lastname' => $_POST['lastname'],
                 'email' => $_POST['email'],
-                'tel' => $_POST['tel'],
                 'role' => 'ROLE_USER',
                 'password' => sha1($_POST['password']),
             ]);
@@ -105,6 +103,15 @@ class UsersController extends AppController {
                 header('Location: index.php?p=users.login');
             }
         }
+    }
+
+    public function panier(){
+        $this->render('users.panier');
+    }
+
+    public function compte(){
+        $form = new BootstrapForm($_POST);
+        $this->render('users.compte', compact('form'));
     }
 
 }

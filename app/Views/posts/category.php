@@ -38,36 +38,36 @@
                     <div class="Articles">
                         <img src="..\public\img\Article\CouleurRouge.png" alt="">
                         <p class="policeCHAKRA font24">Couleur Rouge - 64,99 €</p>
-                        <a href="" class="policeCHAKRA font20">Acheter</a>
+                        <a href="../public/index.php?p=posts.show&id=1" class="policeCHAKRA font20">Acheter</a>
                     </div>
                     <div class="Articles">
                         <img src="..\public\img\Article\CouleurRouge.png" alt="">
                         <p class="policeCHAKRA font24">Couleur Rouge - 64,99 €</p>
-                        <a href="" class="policeCHAKRA font20">Acheter</a>
+                        <a href="../public/index.php?p=posts.show&id=1" class="policeCHAKRA font20">Acheter</a>
                     </div>
                     <div class="Articles">
                         <img src="..\public\img\Article\CouleurRouge.png" alt="">
                         <p class="policeCHAKRA font24">Couleur Rouge - 64,99 €</p>
-                        <a href="" class="policeCHAKRA font20">Acheter</a>
+                        <a href="../public/index.php?p=posts.show&id=1" class="policeCHAKRA font20">Acheter</a>
                     </div>
                     <div class="Articles">
                         <img src="..\public\img\Article\CouleurRouge.png" alt="">
                         <p class="policeCHAKRA font24">Couleur Rouge - 64,99 €</p>
-                        <a href="" class="policeCHAKRA font20">Acheter</a>
+                        <a href="../public/index.php?p=posts.show&id=1" class="policeCHAKRA font20">Acheter</a>
                     </div>
                     <div class="Articles">
                         <img src="..\public\img\Article\CouleurRouge.png" alt="">
                         <p class="policeCHAKRA font24">Couleur Rouge - 64,99 €</p>
-                        <a href="" class="policeCHAKRA font20">Acheter</a>
+                        <a href="../public/index.php?p=posts.show&id=1" class="policeCHAKRA font20">Acheter</a>
                     </div>
                     <div class="Articles">
                         <img src="..\public\img\Article\CouleurRouge.png" alt="">
                         <p class="policeCHAKRA font24">Couleur Rouge - 64,99 €</p>
-                        <a href="" class="policeCHAKRA font20">Acheter</a>
+                        <a href="../public/index.php?p=posts.show&id=1" class="policeCHAKRA font20">Acheter</a>
                     </div>
                 </div>
                 <div class="VoirPlus">
-                    <a href="../public/index.php?p=posts.show&id=1" class="policeCHAKRA font20">Voir Plus</a>
+                    <a href="" class="policeCHAKRA font20">Voir Plus</a>
                 </div>
             </div>
         </div>

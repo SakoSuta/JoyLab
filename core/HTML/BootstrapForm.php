@@ -21,7 +21,7 @@ class BootstrapForm extends Form{
         if($type === 'textarea'){
             $input = '<textarea name="' . $name . '" placeholder="' . $label . '" class="font20 policeCHAKRA">' . $this->getValue($name) . '</textarea>';
         } else{
-            $input = '<input type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '" placeholder="' . $label . '" class="InputInf font20 policeCHAKRA">';
+            $input = '<input type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '" placeholder="' . $label . '" class="policeCHAKRA font20">';
         }
         return $input;
     }

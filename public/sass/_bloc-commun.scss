@@ -191,6 +191,11 @@ html {
 }
 
 .boutonFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   margin-top: 27px;
   width: 110px;
   height: 30px;
@@ -287,6 +292,21 @@ html {
   transform: scale(1.2);
   //changer la couleur #1CC9A1
 }
+
+.scroll::-webkit-scrollbar{
+  background-color: $vert;
+  margin-right: 10px;
+  border-radius: 10px;
+	border: solid 4px transparent;
+	border-right-width: 80px;
+  width: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb{
+  background-color: $bleu;
+  border-radius: 10px;
+}
+
 
 video {
   width: 100%;

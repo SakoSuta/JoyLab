@@ -15,9 +15,9 @@
             <div class="ContenuCategoryApp">
                 <div class="passe"><img src="../public/img/Icon/Black/Précedent.svg" alt="Précedent"></div>
                 <div class="Articles">
-                    <a href=""><img src="../public/img/Article/Article1B.png" alt=""></a>
-                    <a href=""><img src="../public/img/Article/Article2B.png" alt=""></a>
-                    <a href=""><img src="../public/img/Article/Article3B.png" alt=""></a>
+                    <a href="../public/index.php?p=posts.show&id=1"><img src="../public/img/Article/Article1B.png" alt=""></a>
+                    <a href="../public/index.php?p=posts.show&id=1"><img src="../public/img/Article/Article2B.png" alt=""></a>
+                    <a href="../public/index.php?p=posts.show&id=1"><img src="../public/img/Article/Article3B.png" alt=""></a>
                 </div>
                 <div class="passe"><img src="../public/img/Icon/Black/Suivant.svg" alt="Suivant"></div>
             </div>

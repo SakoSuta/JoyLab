@@ -39,7 +39,7 @@
                 <a href="">
                     <img class="overimg" src="../public/img/Icon/White/heart.svg" alt="icon">
                 </a>
-                <a href="">
+                <a href="../public/index.php?p=users.panier">
                     <img class="overimg" src="../public/img/Icon/White/shopping-basket.svg" alt="icon">
                 </a>
                 <a href="../public/index.php?p=users.login">
@@ -64,9 +64,9 @@
                     <img src="../public/img/Icon/White/mail.svg" alt="icon-mail">
                     <p class="font16 policeCHAKRA">Entrer votre email</p>
                 </div>
-                <button class="boutonFooter font16 policeCHAKRA">
+                <a class="boutonFooter font16 policeCHAKRA" href="">
                     S’inscrire
-                </button>
+                </a>
             </div>
         </div>
         <div class="en-savoir-plus">

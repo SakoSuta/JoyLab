@@ -9,7 +9,7 @@
     </div>
   <?php endif; ?>
 
-  <?php if ($errors) : ?>
+  <?php if ($errorss) : ?>
     <div class="Erreur font16 policeIBM">
       Identifiants incorrects
     </div>
@@ -19,8 +19,8 @@
 
     <div class="signUp">
       <p class="TitreSignUp-In font40 CHAKRABold">S'inscrire</p>
-      <div class="FormSignUp">
-        <form method="post">
+      <div class="FormSignUp" >
+        <form method="post" action="index.php?p=users.inscription">
           <div class="FNameLName">
             <div class="InfoInput">
               <?= $form->input('firstname', 'Prénom'); ?>
