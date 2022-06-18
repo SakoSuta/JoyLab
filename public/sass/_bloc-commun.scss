@@ -1,70 +1,44 @@
 .contenuNav,
 .categorieNav,
-.icon,
+.iconNAV,
 .Footerrr,
 .LogoAndNew,
 .mail,
 .en-savoir-plus,
-.info,
+.infoSecurity,
 .infoPaiement,
 .Contacter,
 .contact,
 .reseau,
-.Btn-contact,
-.CategorieAc,
-.autreCategorie,
-.emilie,
-.ContenuMeilAchat,
-.passe,
-.MeilleurArticle,
-.Compte,
-.TousCompte,.InfoInput,.Titre{
+.Btn-contact
+{
   display: flex;
 }
 
-.info,
+.infoSecurity,
 .Contacter,
-.autreCategorie,
-.LogoAndNew,
-.Compte {
+.LogoAndNew {
   flex-direction: column;
 }
 
 .Btn-contact,
 .Footerrr,
-.CategorieAc,
-.emilie,
-.LogoAndNew,
-.TousCompte {
+.LogoAndNew {
   justify-content: center;
 }
 
-.ContenuMeilAchat,
-.Compte {
-  align-items: center;
-}
-
 .categorieNav,
-.icon {
+.iconNAV {
   align-items: end;
-}
-
-.Titre{
-  align-items: start;
 }
 
 .contenuNav,
 .categorieNav,
-.icon,
+.iconNAV,
 .Footerrr,
-.en-savoir-plus,
-.ContenuMeilAchat,
-.MeilleurArticle {
+.en-savoir-plus
+{
   justify-content: space-between;
-}
-
-.InfoInput{
-  border-radius: 10px;
 }
 
 html {
@@ -92,7 +66,7 @@ html {
       color: $blanc;
     }
   }
-  .icon {
+  .iconNAV {
     width: 50%;
     max-width: 106px;
     margin-right: 62px;
@@ -142,7 +116,7 @@ html {
         color: $blanc;
       }
 
-      .info {
+      .infoSecurity {
         a {
           text-decoration: none;
           color: $blanc;
@@ -182,7 +156,7 @@ html {
         margin: 25px 0px;
         align-items: end;
 
-        img {
+        svg {
           margin-right: 14px;
         }
       }
@@ -290,7 +264,10 @@ html {
 
 .overimg:hover {
   transform: scale(1.2);
-  //changer la couleur #1CC9A1
+  
+  path{
+    fill: $vert;
+  }
 }
 
 .scroll::-webkit-scrollbar{

@@ -19,7 +19,7 @@
 
     <div class="signUp">
       <p class="TitreSignUp-In font40 CHAKRABold">S'inscrire</p>
-      <div class="FormSignUp" >
+      <div class="FormSignUp">
         <form method="post" action="index.php?p=users.inscription">
           <div class="FNameLName">
             <div class="InfoInput">
@@ -36,14 +36,14 @@
             </div>
             <div class="InfoInput">
               <img src="../public/img/Icon/Black/lock.svg" alt="Lock">
-              <?= $form->input('password', 'Mot de passe',['type' => 'password']); ?>
+              <?= $form->input('password', 'Mot de passe', ['type' => 'password']); ?>
             </div>
             <div class="InfoInput">
               <img src="../public/img/Icon/Black/lock.svg" alt="Lock">
               <?= $form->input('passwordVerif', 'Confirmez Mot de passe', ['type' => 'password']); ?>
             </div>
           </div>
-            <button class="sinscrire font20 policeCHAKRA">S'inscrire</button>
+          <button class="sinscrire font20 policeCHAKRA">S'inscrire</button>
         </form>
       </div>
     </div>

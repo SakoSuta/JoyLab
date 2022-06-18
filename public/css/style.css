@@ -1,70 +1,42 @@
 .contenuNav,
 .categorieNav,
-.icon,
+.iconNAV,
 .Footerrr,
 .LogoAndNew,
 .mail,
 .en-savoir-plus,
-.info,
+.infoSecurity,
 .infoPaiement,
 .Contacter,
 .contact,
 .reseau,
-.Btn-contact,
-.CategorieAc,
-.autreCategorie,
-.emilie,
-.ContenuMeilAchat,
-.passe,
-.MeilleurArticle,
-.Compte,
-.TousCompte, .InfoInput, .Titre {
+.Btn-contact {
   display: flex;
 }
 
-.info,
+.infoSecurity,
 .Contacter,
-.autreCategorie,
-.LogoAndNew,
-.Compte {
+.LogoAndNew {
   flex-direction: column;
 }
 
 .Btn-contact,
 .Footerrr,
-.CategorieAc,
-.emilie,
-.LogoAndNew,
-.TousCompte {
+.LogoAndNew {
   justify-content: center;
 }
 
-.ContenuMeilAchat,
-.Compte {
-  align-items: center;
-}
-
 .categorieNav,
-.icon {
+.iconNAV {
   align-items: end;
-}
-
-.Titre {
-  align-items: start;
 }
 
 .contenuNav,
 .categorieNav,
-.icon,
+.iconNAV,
 .Footerrr,
-.en-savoir-plus,
-.ContenuMeilAchat,
-.MeilleurArticle {
+.en-savoir-plus {
   justify-content: space-between;
-}
-
-.InfoInput {
-  border-radius: 10px;
 }
 
 html {
@@ -89,7 +61,7 @@ html {
   text-decoration: none;
   color: #CED8E2;
 }
-.navig .icon {
+.navig .iconNAV {
   width: 50%;
   max-width: 106px;
   margin-right: 62px;
@@ -132,7 +104,7 @@ html {
   margin-bottom: 20px;
   color: #CED8E2;
 }
-.Footerrr .en-savoir-plus .contenuFoot .info a {
+.Footerrr .en-savoir-plus .contenuFoot .infoSecurity a {
   text-decoration: none;
   color: #CED8E2;
   margin-bottom: 14px;
@@ -157,7 +129,7 @@ html {
   margin: 25px 0px;
   align-items: end;
 }
-.Footerrr .en-savoir-plus .Contacter .reseau img {
+.Footerrr .en-savoir-plus .Contacter .reseau svg {
   margin-right: 14px;
 }
 
@@ -258,6 +230,9 @@ html {
 .overimg:hover {
   transform: scale(1.2);
 }
+.overimg:hover path {
+  fill: #1CC9A1;
+}
 
 .scroll::-webkit-scrollbar {
   background-color: #1CC9A1;
@@ -278,15 +253,15 @@ video {
   height: 100%;
 }
 
-main {
-  background-color: #CED8E2;
-}
-
 .CategorieAc {
   margin: 76px 0px;
+  display: flex;
+  justify-content: center;
 }
 .CategorieAc .autreCategorie {
   margin-left: 19px;
+  display: flex;
+  flex-direction: column;
 }
 .CategorieAc .autreCategorie .motifs {
   margin-bottom: 17px;
@@ -296,26 +271,39 @@ main {
   background-color: #112B3D;
   margin-bottom: 75px;
 }
-.MeilleursAchats .NosMeilAchat {
+.MeilleursAchats .TitreMA p {
   color: #CED8E2;
-  margin-top: 40px;
-  margin-left: 70px;
-  margin-bottom: 37px;
+  padding-top: 40px;
+  padding-left: 70px;
+  padding-bottom: 37px;
 }
-.MeilleursAchats .ContenuMeilAchat {
+.MeilleursAchats .ListeMeilAchat {
+  display: flex;
+  justify-content: center;
+}
+.MeilleursAchats .ListeMeilAchat .ContenuMeilAchat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 56px;
   width: 100%;
   max-width: 1380px;
 }
-.MeilleursAchats .ContenuMeilAchat .passe {
+.MeilleursAchats .ListeMeilAchat .ContenuMeilAchat .passe {
+  display: flex;
   margin: 0px 55px;
 }
-.MeilleursAchats .ContenuMeilAchat .MeilleurArticle {
+.MeilleursAchats .ListeMeilAchat .ContenuMeilAchat .MeilleurArticle {
+  display: flex;
+  justify-content: space-between;
   width: 70%;
   max-width: 1080px;
 }
 
 .Compte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 126px;
 }
 .Compte .MonCompte {
@@ -326,7 +314,6 @@ main {
 }
 .Compte .Titre {
   width: 100%;
-  margin-bottom: 40px;
 }
 .Compte .Erreur {
   border-radius: 10px;
@@ -365,6 +352,8 @@ main {
 }
 .Compte .TousCompte .signUp .FormSignUp form .FNameLName .InfoInput {
   background-color: #CED8E2;
+  border-radius: 10px;
+  display: flex;
   max-width: 396px;
   margin: 15px;
 }
@@ -383,6 +372,8 @@ main {
 }
 .Compte .TousCompte .signUp .FormSignUp form .AutreInfo .InfoInput {
   background-color: #CED8E2;
+  border-radius: 10px;
+  display: flex;
   max-width: 396px;
   margin: 15px;
 }
@@ -432,6 +423,8 @@ main {
 }
 .Compte .TousCompte .signIn .FormSignIn form .InfoInput {
   background-color: #112B3D;
+  border-radius: 10px;
+  display: flex;
   max-width: 396px;
   margin: 15px;
 }
@@ -627,6 +620,10 @@ main {
 .CategoryAppareil .ContenuCategoryApp .Articles a {
   margin: 0px 20px;
 }
+.CategoryAppareil .VoirPlusApp {
+  display: flex;
+  margin-top: 15px;
+}
 .CategoryAppareil .VoirPlusApp a {
   background-color: #112B3D;
   color: #1CC9A1;
@@ -692,9 +689,7 @@ main {
 }
 .Panier .InfoPanier {
   color: #112B3D;
-  margin-top: 103px;
-  margin-left: 67px;
-  margin-bottom: 98px;
+  margin: 103px 0px 98px 67px;
 }
 .Panier .ContenuPanier {
   background-color: #112B3D;

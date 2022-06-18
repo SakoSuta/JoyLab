@@ -39,6 +39,8 @@
   }
 
   .VoirPlusApp {
+    display: flex;
+    margin-top: 15px;
     a {
       background-color: $bleu;
       color: $vert;

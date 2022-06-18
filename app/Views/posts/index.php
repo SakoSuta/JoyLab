@@ -47,9 +47,11 @@
     <section>
         <div class="MeilleursAchats">
 
-            <p class="NosMeilAchat policeCHAKRA font32">Nos Meilleurs achats</p>
+            <div class="TitreMA">
+                <p class="policeCHAKRA font32">Nos Meilleurs achats</p>
+            </div>
 
-            <div class="emilie">
+            <div class="ListeMeilAchat">
                 <div class="ContenuMeilAchat">
                     
                     <a href="" class="passe"><img src="../public/img/Icon/White/Précedent.svg" alt="Précedent"></a>
