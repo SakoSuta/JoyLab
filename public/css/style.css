@@ -1062,4 +1062,25 @@ video {
   color: #CED8E2;
 }
 
+.GameOver {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0px;
+}
+.GameOver a {
+  background-color: transparent;
+  text-decoration: none;
+  color: #112B3D;
+  border: 2px solid #112B3D;
+  margin-top: 50px;
+  padding: 15px 40px;
+}
+.GameOver a:hover {
+  background-color: #1CC9A1;
+  color: #CED8E2;
+}
+
 /*# sourceMappingURL=style.css.map */

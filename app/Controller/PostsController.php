@@ -21,7 +21,11 @@ class PostsController extends AppController{
     }
 
     public function categoryAppareil(){
+        // $categorieAppareil = $this->Category->find($_GET['id']);
         $this->render('posts.categoryAppareil');
+        // if($categorieAppareil === false){
+        //     $this->notFound();
+        // }
     }
 
     public function category(){
@@ -43,6 +47,10 @@ class PostsController extends AppController{
     public function contact(){
         $form = new BootstrapForm($_POST);
         $this->render('posts.contact', compact('form'));
+    }
+
+    public function Error(){
+        $this->render('posts.Error');
     }
 
 }
