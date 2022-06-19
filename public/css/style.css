@@ -63,7 +63,7 @@ html {
 }
 .navig .iconNAV {
   width: 50%;
-  max-width: 106px;
+  max-width: 115px;
   margin-right: 62px;
 }
 
@@ -306,7 +306,7 @@ video {
 .Compte .Erreur {
   border-radius: 10px;
   padding: 20px;
-  background-color: rgb(212, 59, 59);
+  background-color: #D43B3B;
 }
 .Compte .TousCompte {
   width: 70%;
@@ -754,6 +754,9 @@ video {
 .Panier .ContenuPanier .TableauPanier .Colonne .Produit .InfoProduit .TitreProduit {
   margin-bottom: 40px;
 }
+.Panier .ContenuPanier .TableauPanier .Colonne .Produit .InfoProduit:hover path {
+  stroke: #D43B3B;
+}
 .Panier .ContenuPanier .Resum {
   width: 490px;
   height: max-content;
@@ -803,6 +806,9 @@ video {
   padding: 15px 70px;
   color: #CED8E2;
   text-decoration: none;
+}
+.Panier .ContenuPanier .Resum .ContenuResume .Commande:hover a {
+  background-color: #1CC9A1;
 }
 
 .GestionDeCompte {
@@ -963,6 +969,97 @@ video {
 }
 .GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .BoutonSauve:hover a {
   background-color: #1CC9A1;
+}
+
+.FicheProduit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.FicheProduit .ContenuFP {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0px;
+}
+.FicheProduit .ContenuFP .ImageProduit {
+  background-color: #112B3D;
+  border-radius: 10px;
+  width: 686px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.FicheProduit .ContenuFP .ImageProduit img {
+  width: 70%;
+}
+.FicheProduit .ContenuFP .FicheInfo {
+  background-color: #112B3D;
+  border-radius: 10px;
+  width: 509px;
+}
+.FicheProduit .ContenuFP .FicheInfo .haut {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-left: 40px;
+}
+.FicheProduit .ContenuFP .FicheInfo .haut .Produit p {
+  color: #1CC9A1;
+  margin-bottom: 37px;
+}
+.FicheProduit .ContenuFP .FicheInfo .haut .Produit .Play {
+  color: #CED8E2;
+}
+.FicheProduit .ContenuFP .FicheInfo .haut .quanti {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin-right: 10px;
+}
+.FicheProduit .ContenuFP .FicheInfo .haut .quanti .ContenuQuanti {
+  display: flex;
+  align-items: center;
+}
+.FicheProduit .ContenuFP .FicheInfo .haut .quanti .ContenuQuanti p {
+  color: #CED8E2;
+  margin-right: 5px;
+}
+.FicheProduit .ContenuFP .FicheInfo .haut .quanti .ContenuQuanti .InputQuanti input {
+  background-color: transparent;
+  color: #CED8E2;
+  border: 0px;
+  width: 50px;
+  height: 20px;
+}
+.FicheProduit .ContenuFP .FicheInfo .descrip {
+  background-color: #1CC9A1;
+  margin: 54px 0px;
+  padding: 24px 0px 24px 24px;
+}
+.FicheProduit .ContenuFP .FicheInfo .descrip .ContenuDescrip {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.FicheProduit .ContenuFP .FicheInfo .descrip .ContenuDescrip p {
+  width: 391px;
+}
+.FicheProduit .ContenuFP .FicheInfo .AjoutPanier {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+.FicheProduit .ContenuFP .FicheInfo .AjoutPanier a {
+  background-color: #CED8E2;
+  color: #112B3D;
+  padding: 16px 60px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.FicheProduit .ContenuFP .FicheInfo .AjoutPanier:hover a {
+  background-color: #1CC9A1;
+  color: #CED8E2;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -66,6 +66,13 @@
               margin-bottom: 40px;
             }
           }
+
+          .InfoProduit:hover {
+            
+            path{
+              stroke: $rouge;
+            }
+          }
         }
       }
     }
@@ -119,6 +126,11 @@
             padding: 15px 70px;
             color: $blanc;
             text-decoration: none;
+          }
+        }
+        .Commande:hover{
+          a{
+            background-color: $vert;
           }
         }
       }
