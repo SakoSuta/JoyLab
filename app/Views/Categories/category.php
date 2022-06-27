@@ -7,23 +7,27 @@
         </div>
     </section>
     <section>
+        <?php foreach($sous_categories as $sous_categorie): ?>
         <div class="CategoryAppareil">
             <div class="InfoCategoryApp">
-                <p class="CHAKRARegular font32">Toutes nos couleur unique de manette PS5</p>
+                <p class="CHAKRARegular font32">Toutes nos manette <?= $sous_categorie->titre; ?></p>
                 <p class="policeCHAKRA font20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim</p>
             </div>
             <div class="ContenuCategoryApp">
                 <div class="passe"><img src="../public/img/Icon/Black/Précedent.svg" alt="Précedent"></div>
                 <div class="Articles">
-                    <a href="../public/index.php?p=posts.show&id=1"><img src="../public/img/Article/Article1B.png" alt=""></a>
-                    <a href="../public/index.php?p=posts.show&id=1"><img src="../public/img/Article/Article2B.png" alt=""></a>
-                    <a href="../public/index.php?p=posts.show&id=1"><img src="../public/img/Article/Article3B.png" alt=""></a>
+                    <?=var_dump($sous_categories)?>
+                    <?=var_dump($produits)?>
+                    <?php foreach($produits as $produit): ?>
+                        <a href="../public/index.php?p=posts.show&id=<?=$produit->id?>"><img src="../public/img/Article/<?=$produit->img1?>" alt="Image Produit"></a>
+                    <?php endforeach; ?>
                 </div>
                 <div class="passe"><img src="../public/img/Icon/Black/Suivant.svg" alt="Suivant"></div>
             </div>
             <div class="VoirPlusApp">
-                <a href="../public/index.php?p=posts.category&id=1" class="policeCHAKRA font20">Voir plus</a>
+                <a href="<?= $sous_categorie->url; ?>" class="policeCHAKRA font20">Voir plus</a>
             </div>
         </div>
+        <?php endforeach; ?>
     </section>
 </main>

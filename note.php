@@ -131,3 +131,63 @@ Table {
           }
         }
       }
+
+<?php
+
+        // if(!empty($_POST)){
+        //     // Vérification des champs de manière générale
+        //     if(empty($_POST['firstname']) || 
+        //        empty($_POST['lastname']) || 
+        //        empty($_POST['email']) ||
+        //        empty($_POST['password']) ||
+        //        empty($_POST['passwordVerif'])
+        //        ){
+        //         $errors = true;
+        //         $messageError = "Veuillez remplir tous les champs";
+        //     }else{
+
+        //         // if($_POST['email'] != $_POST['emailVerif']){
+        //         //     $errors = true;
+        //         //     $messageError = "Les champs d'email sont incorrect";
+        //         // }
+
+        //         if($_POST['password'] != $_POST['passwordVerif']){
+        //             $errors = true;
+        //             $messageError = "Les champs de password sont incorrect";
+        //         }
+
+        //         // if(strlen($_POST['tel']) < 10){
+        //         //     $errors = true;
+        //         //     $messageError = "Le champ de téléphone doit comporter 10 chiffres";
+        //         // }
+
+?>
+
+<!-- <h1><?= $categorie->titre ?></h1>
+
+<div class="row">
+    <div class="col-sm-8">
+        <?php foreach ($produits as $post): ?>
+
+            <h2><a href="<?= $post->url ?>"><?= $post->titre; ?></a></h2>
+
+            <p><em><?= $post->categorie; ?></em></p>
+
+            <p><?= $post->extrait; ?></p>
+
+        <?php endforeach; ?>
+
+    </div>
+
+    <div class="col-sm-4">
+        <ul>
+            <?php foreach($categories as $categorie): ?>
+                <li><a href="<?= $categorie->url; ?>"><?= $categorie->titre; ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</div> -->
+
+<!-- <?php foreach($categories as $categorie): ?>
+                <li><a href="<?= $categorie->url; ?>"><?= $categorie->titre; ?></a></li>
+            <?php endforeach; ?> -->

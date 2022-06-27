@@ -51,7 +51,7 @@ html {
   width: 100%;
   height: 130px;
   background-color: $bleu;
-  // position: fixed;
+  position: fixed;
   .LogoNav {
     margin: 29px 0px 0px 69px;
     width: 159px;
@@ -276,4 +276,8 @@ html {
 video {
   width: 100%;
   height: 100%;
+}
+
+.coloro{
+  color: aqua;
 }

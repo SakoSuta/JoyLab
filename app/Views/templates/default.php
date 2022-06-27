@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="../public/img/Icon/Black/b.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,9 +31,9 @@
                 <img class="LogoNav" src="../public/img/Logo/JoyW.svg" alt="logo">
             </a>
             <div class="categorieNav font24 policeIBM">
-                <a class="over" href="../public/index.php?p=posts.categoryAppareil">PlayStation</a>
-                <a class="over" href="">Xbox</a>
-                <a class="over" href="">Nintendo</a>
+                <?php foreach($categories as $categorie): ?>
+                    <a class="over" href="<?= $categorie->url; ?>"><?= $categorie->titre; ?></a>
+                <?php endforeach; ?>
             </div>
             <div class="iconNAV">
                 <a href="">
@@ -42,9 +42,20 @@
                 <a href="../public/index.php?p=users.panier">
                     <img class="overimg" src="../public/img/Icon/White/shopping-basket.svg" alt="icon panier">
                 </a>
-                <a href="../public/index.php?p=users.login">
+                <?php
+                if($_SESSION['auth']){ ?>
+                    <a href="../public/index.php?p=users.Compte">
                     <img class="overimg" src="../public/img/Icon/White/user.svg" alt="icon utilisateur">
-                </a>
+                    </a>
+                <?php
+                }
+                else{ ?>
+                    <a href="../public/index.php?p=users.login">
+                    <img class="overimg" src="../public/img/Icon/White/user.svg" alt="icon utilisateur">
+                    </a>
+                <?php
+                }
+                ?>
             </div>
         </div>
     </nav>

@@ -1,39 +1,63 @@
-<!-- <h1><?= $article->titre; ?></h1>
+<h1><?= $produit->titre; ?></h1>
 
-<p><em><?= $article->categorie; ?></em></p>
+<img src="../public/img/upload/<?= $produit->img; ?>" style="width: 10%;">
 
-<p><?= $article->contenu; ?></p> -->
+<p><?= $produit->description; ?></p>
 
+
+<p><?= $produit->prix; ?>€</p>
+
+<form method="post" action="index.php?p=panier.add">
+
+    <label for="nbr">Nombre</label>
+    <input type="number" name="nbr" id="nbr" class="form-control">
+    <input type="hidden" name="idProduit" id="idProduit" class="form-control" value="<?=$produit->id;?>">
+    <input type="hidden" name="prix" id="prix" class="form-control" value="<?=$produit->prix;?>">
+    <input type="hidden" name="titre" id="titre" class="form-control" value="<?=$produit->titre;?>">
+
+    <button class="btn btn-primary">Ajouter au panier</button>
+</form>
 <main>
     <section>
         <div class="FicheProduit">
             <div class="ContenuFP">
                 <div class="ImageProduit">
-                    <img src="..\public\img\Article\CouleurRougeB.png" alt="Couleur Rouge">
+                    <img src="..\public\img\upload\<?=$produits->img4?>" alt="Image Produit">
                 </div>
                 <div class="FicheInfo">
-                    <div class="haut">
-                        <div class="Produit">
-                            <p class="CHAKRASemiBold font40">Couleur Rouge</p>
-                            <p class="Play CHAKRARegular font24">PlayStation 5</p>
-                            <p class="CHAKRAMedium font32">64,99 €</p>
-                        </div>
-                        <div class="quanti">
-                            <div class="ContenuQuanti">
-                                <p class="CHAKRAMedium font20">Quantité :</p>
-                                <div class="InputQuanti"><?= $form->input('quantité', '1', ['type' => 'number']); ?></div>
+                    <form methode="post" action="index.php?p=panier.add">
+                        <div class="haut">
+                            <div class="Produit">
+                                <input type="hidden" name="img" id="img" value="<?=$produits->img4;?>">
+                                <p class="CHAKRASemiBold font40"><?=$produits->titre?></p>
+                                <input type="hidden" name="idProduit" id="idProduit" value="<?=$produits->id;?>">
+                                <input type="hidden" name="titre" id="titre" value="<?=$produits->titre;?>">
+                                <p class="Play CHAKRARegular font24"><?=$souscategories->titre?></p>
+                                <input type="hidden" name="souscategories" id="souscategories" value="<?=$souscategories->titre?>">
+                                <p class="CHAKRAMedium font32"><?=$produits->prix?> €</p>
+                                <input type="hidden" name="prix" id="prix" value="<?=$produits->prix;?>">
+                            </div>
+                            <div class="quanti">
+                                <div class="ContenuQuanti">
+                                    <p class="CHAKRAMedium font20">Quantité :</p>
+                                    <div class="InputQuanti">
+                                        <div class="Aligne">
+                                            <input type="number" name="nbr" id="nbr" placeholder="1" min="1" max="20" class="policeCHAKRA font20">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="descrip">
-                        <p class="CHAKRAMedium font24">Description</p>
-                        <div class="ContenuDescrip">
-                            <p class="policeCHAKRA font20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In purus porttitor fermentum sociis in. Neque risus nunc tellus mauris. Varius enim urna, quisque amet, integer. Aliquet vulputate pretium ultricies sed faucibus tempus et non, in. Ut nunc viverra suspendisse enim, consequat, nulla.</p>
+                        <div class="descrip">
+                            <p class="CHAKRAMedium font24">Description</p>
+                            <div class="ContenuDescrip">
+                                <p class="policeCHAKRA font20"><?=$produits->description?></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="AjoutPanier">
-                        <a href=""class="CHAKRAMedium font24">Ajouter au panier</a>
-                    </div>
+                        <div class="AjoutPanier">
+                            <button href=""class="CHAKRAMedium font24">Ajouter au panier</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

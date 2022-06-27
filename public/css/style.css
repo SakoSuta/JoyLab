@@ -47,6 +47,7 @@ html {
   width: 100%;
   height: 130px;
   background-color: #112B3D;
+  position: fixed;
 }
 .navig .LogoNav {
   margin: 29px 0px 0px 69px;
@@ -241,6 +242,10 @@ video {
   height: 100%;
 }
 
+.coloro {
+  color: aqua;
+}
+
 .CategorieAc {
   margin: 76px 0px;
   display: flex;
@@ -292,10 +297,10 @@ video {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 126px;
+  margin-bottom: 177px;
 }
 .Compte .MonCompte {
-  margin-top: 103px;
+  margin-top: 205px;
   margin-left: 67px;
   margin-bottom: 98px;
   color: #112B3D;
@@ -345,12 +350,22 @@ video {
   max-width: 396px;
   margin: 15px;
 }
-.Compte .TousCompte .signUp .FormSignUp form .FNameLName .InfoInput input {
+.Compte .TousCompte .signUp .FormSignUp form .FNameLName .InfoInput .Aligne {
+  display: flex;
+  flex-direction: column;
+}
+.Compte .TousCompte .signUp .FormSignUp form .FNameLName .InfoInput .Aligne input {
   margin: 18px;
+  margin-bottom: 8px;
   width: 100%;
   border: 0px;
   color: #112B3D;
   background-color: transparent;
+}
+.Compte .TousCompte .signUp .FormSignUp form .FNameLName .InfoInput .Aligne p {
+  color: #D43B3B;
+  margin-left: 10px;
+  padding-bottom: 10px;
 }
 .Compte .TousCompte .signUp .FormSignUp form .AutreInfo {
   width: 100%;
@@ -362,22 +377,32 @@ video {
   background-color: #CED8E2;
   border-radius: 10px;
   display: flex;
-  max-width: 396px;
   margin: 15px;
 }
 .Compte .TousCompte .signUp .FormSignUp form .AutreInfo .InfoInput img {
   max-width: 22px;
   margin-left: 20px;
+  max-height: 70px;
 }
-.Compte .TousCompte .signUp .FormSignUp form .AutreInfo .InfoInput input {
+.Compte .TousCompte .signUp .FormSignUp form .AutreInfo .InfoInput .Aligne {
+  display: flex;
+  flex-direction: column;
+}
+.Compte .TousCompte .signUp .FormSignUp form .AutreInfo .InfoInput .Aligne input {
   margin: 18px;
-  width: 100%;
+  margin-bottom: 8px;
   padding-left: 20px;
   border: 0px;
   border-left-width: 1px;
   border-left-style: solid;
+  outline: none;
   color: #112B3D;
   background-color: transparent;
+}
+.Compte .TousCompte .signUp .FormSignUp form .AutreInfo .InfoInput .Aligne p {
+  color: #D43B3B;
+  margin-left: 10px;
+  padding-bottom: 10px;
 }
 .Compte .TousCompte .signUp .FormSignUp form .sinscrire {
   background-color: #CED8E2;
@@ -425,12 +450,12 @@ video {
 }
 .Compte .TousCompte .signIn .FormSignIn form .InfoInput input {
   margin: 18px;
-  width: 100%;
   padding-left: 20px;
   border: 0px;
   border-left-width: 1px;
   border-left-style: solid;
   color: #CED8E2;
+  outline: none;
   background-color: transparent;
 }
 .Compte .TousCompte .signIn .FormSignIn form .Connected {
@@ -456,9 +481,10 @@ video {
 .Contact {
   display: flex;
   justify-content: center;
-  margin: 126px 0px;
 }
 .Contact .ContenuContact {
+  margin-top: 205px;
+  margin-bottom: 150px;
   width: 85%;
   display: flex;
   justify-content: space-between;
@@ -498,7 +524,8 @@ video {
   align-items: center;
   justify-content: space-between;
 }
-.Contact .ContenuContact .NousContacter p {
+.Contact .ContenuContact .NousContacter .TitreContact p {
+  color: #112B3D;
   margin-bottom: 50px;
 }
 .Contact .ContenuContact .NousContacter .FormContact {
@@ -519,12 +546,22 @@ video {
   border-radius: 10px;
   width: 45%;
 }
-.Contact .ContenuContact .NousContacter .FormContact .CFirstLastName .InfoInputC input {
+.Contact .ContenuContact .NousContacter .FormContact .CFirstLastName .InfoInputC .Aligne {
+  display: flex;
+  flex-direction: column;
+}
+.Contact .ContenuContact .NousContacter .FormContact .CFirstLastName .InfoInputC .Aligne input {
   max-width: 75%;
   margin: 18px;
+  margin-bottom: 8px;
   color: #CED8E2;
   border: 0px;
   background-color: transparent;
+}
+.Contact .ContenuContact .NousContacter .FormContact .CFirstLastName .InfoInputC .Aligne p {
+  color: #D43B3B;
+  margin-left: 20px;
+  padding-bottom: 10px;
 }
 .Contact .ContenuContact .NousContacter .FormContact .CNumMail {
   display: flex;
@@ -540,10 +577,16 @@ video {
 .Contact .ContenuContact .NousContacter .FormContact .CNumMail .InfoInputC img {
   max-width: 22px;
   margin-left: 20px;
+  height: 65px;
 }
-.Contact .ContenuContact .NousContacter .FormContact .CNumMail .InfoInputC input {
+.Contact .ContenuContact .NousContacter .FormContact .CNumMail .InfoInputC .Aligne {
+  display: flex;
+  flex-direction: column;
+}
+.Contact .ContenuContact .NousContacter .FormContact .CNumMail .InfoInputC .Aligne input {
   max-width: 75%;
   margin: 18px;
+  margin-bottom: 8px;
   color: #CED8E2;
   padding-left: 20px;
   border: 0px;
@@ -551,10 +594,19 @@ video {
   border-left-style: solid;
   background-color: transparent;
 }
+.Contact .ContenuContact .NousContacter .FormContact .CNumMail .InfoInputC .Aligne p {
+  color: #D43B3B;
+  margin-left: 10px;
+  padding-bottom: 10px;
+}
 .Contact .ContenuContact .NousContacter .FormContact .Message {
   margin-bottom: 30px;
 }
-.Contact .ContenuContact .NousContacter .FormContact .Message .InfoInputC textarea {
+.Contact .ContenuContact .NousContacter .FormContact .Message .InfoInputC .Aligne {
+  display: flex;
+  flex-direction: column;
+}
+.Contact .ContenuContact .NousContacter .FormContact .Message .InfoInputC .Aligne textarea {
   min-width: 100%;
   min-height: 60px;
   max-width: 100%;
@@ -566,6 +618,10 @@ video {
   width: 100%;
   height: 144px;
   border: 0px;
+}
+.Contact .ContenuContact .NousContacter .FormContact .Message .InfoInputC .Aligne p {
+  color: #D43B3B;
+  margin-left: 10px;
 }
 .Contact .ContenuContact .NousContacter .FormContact .CEnvoyer {
   display: flex;
@@ -636,13 +692,17 @@ video {
 
 .Category {
   width: 100%;
-  margin: 70px 0px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .Category .InfoCategory {
+  margin-top: 205px;
   margin-bottom: 70px;
+}
+.Category .InfoCategory p {
+  color: #112B3D;
 }
 .Category .ContenuCategory {
   background-color: #112B3D;
@@ -670,6 +730,9 @@ video {
   color: #CED8E2;
   margin: 25px 0px;
 }
+.Category .ContenuCategory .TousArticles .Articles .NomArticle:hover {
+  color: #1CC9A1;
+}
 .Category .ContenuCategory .TousArticles .Articles .btnAcheter {
   background-color: #CED8E2;
   color: #112B3D;
@@ -694,12 +757,14 @@ video {
 }
 
 .Panier {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin-bottom: 130px;
 }
 .Panier .InfoPanier {
   color: #112B3D;
-  margin: 103px 0px 98px 67px;
+  margin: 205px 0px 98px 67px;
 }
 .Panier .ContenuPanier {
   background-color: #112B3D;
@@ -812,10 +877,12 @@ video {
 }
 
 .GestionDeCompte {
-  margin: 110px 0px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 177px;
 }
 .GestionDeCompte .TitreCompte {
-  margin-top: 103px;
+  margin-top: 205px;
   margin-left: 67px;
   margin-bottom: 98px;
   color: #112B3D;
@@ -829,6 +896,7 @@ video {
 .GestionDeCompte .TousCompte .ContenuCompte {
   height: 501px;
   display: flex;
+  height: fit-content;
 }
 .GestionDeCompte .TousCompte .ContenuCompte .CategorieCompte {
   display: flex;
@@ -836,6 +904,9 @@ video {
   width: 430px;
 }
 .GestionDeCompte .TousCompte .ContenuCompte .CategorieCompte a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 33.33%;
   text-align: center;
   text-decoration: none;
@@ -848,10 +919,9 @@ video {
   background-color: #CED8E2;
   border: 1px solid #112B3D;
   width: 974px;
-  height: 100%;
+  height: fit-content;
   padding: 40px;
   padding-bottom: 0px;
-  overflow-y: scroll;
 }
 .GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TextInfo {
   color: #112B3D;
@@ -883,10 +953,18 @@ video {
   display: flex;
   justify-content: right;
 }
-.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .PreNom .Contenu .InputInfo input {
+.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .PreNom .Contenu .InputInfo .Aligne {
+  display: flex;
+  flex-direction: column;
+}
+.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .PreNom .Contenu .InputInfo .Aligne input {
   color: #CED8E2;
   border: 0px;
   background-color: transparent;
+}
+.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .PreNom .Contenu .InputInfo .Aligne p {
+  color: #D43B3B;
+  margin-left: 10px;
 }
 .GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .TelMail {
   display: flex;
@@ -914,8 +992,13 @@ video {
 }
 .GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .TelMail .Contenu .InputInfo img {
   max-width: 22px;
+  max-height: 28px;
 }
-.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .TelMail .Contenu .InputInfo input {
+.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .TelMail .Contenu .InputInfo .Aligne {
+  display: flex;
+  flex-direction: column;
+}
+.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .TelMail .Contenu .InputInfo .Aligne input {
   width: 230px;
   color: #CED8E2;
   margin-left: 18px;
@@ -925,13 +1008,19 @@ video {
   border-left-style: solid;
   background-color: transparent;
 }
+.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .TelMail .Contenu .InputInfo .Aligne p {
+  color: #D43B3B;
+  margin-left: 10px;
+}
 .GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .Adresse {
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 .GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .Adresse .Contenu {
   padding: 30px;
   padding-right: 0px;
-  width: 50%;
+  width: 100%;
   height: 230px;
 }
 .GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .Adresse .Contenu .Info {
@@ -941,25 +1030,33 @@ video {
   margin-bottom: 6px;
 }
 .GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .Adresse .Contenu .InputInfo {
-  height: 100%;
-  background-color: #112B3D;
-  padding: 15px;
-  border-radius: 10px;
-  display: flex;
-}
-.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .Adresse .Contenu .InputInfo textarea {
   width: 100%;
   height: 100%;
+}
+.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .Adresse .Contenu .InputInfo .Aligne {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .Adresse .Contenu .InputInfo .Aligne textarea {
+  background-color: #112B3D;
   color: #CED8E2;
+  padding: 15px;
   border: 0px;
-  background-color: transparent;
+  border-radius: 10px;
+  width: 100%;
+  min-width: 50%;
+  max-width: 100%;
+  height: 100%;
+  min-height: 50%;
+  max-height: 100%;
 }
 .GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .BoutonSauve {
   display: flex;
   justify-content: center;
   margin: 80px 0px;
 }
-.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .BoutonSauve a {
+.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .BoutonSauve button {
   background-color: #112B3D;
   color: #CED8E2;
   padding: 15px 25px;
@@ -967,7 +1064,7 @@ video {
   border-radius: 10px;
   text-decoration: none;
 }
-.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .BoutonSauve:hover a {
+.GestionDeCompte .TousCompte .ContenuCompte .InfoPerso .TousInfo .BoutonSauve button:hover {
   background-color: #1CC9A1;
 }
 
@@ -977,6 +1074,7 @@ video {
   justify-content: center;
 }
 .FicheProduit .ContenuFP {
+  margin-top: 160px;
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -1024,6 +1122,7 @@ video {
 .FicheProduit .ContenuFP .FicheInfo .haut .quanti .ContenuQuanti p {
   color: #CED8E2;
   margin-right: 5px;
+  min-width: fit-content;
 }
 .FicheProduit .ContenuFP .FicheInfo .haut .quanti .ContenuQuanti .InputQuanti input {
   background-color: transparent;
@@ -1050,14 +1149,15 @@ video {
   justify-content: center;
   margin-bottom: 70px;
 }
-.FicheProduit .ContenuFP .FicheInfo .AjoutPanier a {
+.FicheProduit .ContenuFP .FicheInfo .AjoutPanier button {
   background-color: #CED8E2;
   color: #112B3D;
   padding: 16px 60px;
+  border: 0px;
   border-radius: 10px;
   text-decoration: none;
 }
-.FicheProduit .ContenuFP .FicheInfo .AjoutPanier:hover a {
+.FicheProduit .ContenuFP .FicheInfo button:hover {
   background-color: #1CC9A1;
   color: #CED8E2;
 }
@@ -1081,6 +1181,294 @@ video {
 .GameOver a:hover {
   background-color: #1CC9A1;
   color: #CED8E2;
+}
+
+.GestionAdmin .TitreAd {
+  margin-top: 103px;
+  margin-left: 67px;
+  margin-bottom: 98px;
+  color: #112B3D;
+}
+.GestionAdmin .TousAdmin {
+  height: fit-content;
+  padding: 80px 40px;
+  background-color: #112B3D;
+  display: flex;
+  justify-content: center;
+}
+.GestionAdmin .TousAdmin .Admin {
+  height: fit-content;
+}
+.GestionAdmin .TousAdmin .Admin .CategorieAdmin {
+  display: flex;
+  width: 100%;
+}
+.GestionAdmin .TousAdmin .Admin .CategorieAdmin a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  min-width: 290px;
+  text-align: center;
+  text-decoration: none;
+  color: #112B3D;
+  background-color: #CED8E2;
+  border: 1px solid #112B3D;
+  padding: 45px 20px;
+}
+.GestionAdmin .TousAdmin .Admin .ContenuAdmin {
+  background-color: #CED8E2;
+  border: 1px solid #112B3D;
+  padding: 40px;
+  padding-bottom: 0px;
+  min-width: 974px;
+}
+.GestionAdmin .TousAdmin .Admin .Deco {
+  display: flex;
+}
+.GestionAdmin .TousAdmin .Admin .Deco a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #D43B3B;
+  background-color: #CED8E2;
+  border: 1px solid #112B3D;
+  padding: 45px 55px;
+}
+
+.Ajouter {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0px;
+}
+.Ajouter a {
+  background-color: #112B3D;
+  text-decoration: none;
+  border-radius: 10px;
+  color: #CED8E2;
+  padding: 15px 70px;
+}
+
+.AdminTable .Title {
+  color: #112B3D;
+  margin-bottom: 40px;
+}
+.AdminTable table thead tr td {
+  color: #112B3D;
+  text-align: center;
+  padding: 0px 30px;
+}
+.AdminTable table tbody tr {
+  border-radius: 10px;
+  border: 3px solid #112B3D;
+}
+.AdminTable table tbody tr td {
+  color: #112B3D;
+  padding-top: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+.AdminTable table tbody tr td img {
+  width: 100px;
+}
+.AdminTable table tbody tr td a {
+  display: inline-block;
+  background-color: #1CC9A1;
+  color: #112B3D;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+.AdminTable table tbody tr td form button {
+  background-color: #D43B3B;
+  color: #112B3D;
+  border-radius: 10px;
+  border: 0px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.FormUser form {
+  display: flex;
+  justify-content: center;
+}
+.FormUser form .EditUsers {
+  width: fit-content;
+}
+.FormUser form .EditUsers .EditLigne {
+  display: flex;
+}
+.FormUser form .EditUsers .EditLigne .Aligne input {
+  background-color: #112B3D;
+  color: #CED8E2;
+  border: 0px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+}
+.FormUser form .EditUsers .EditLigne .Aligne p {
+  color: #D43B3B;
+}
+.FormUser form .EditUsers .AREA .Aligne {
+  display: flex;
+  justify-content: center;
+}
+.FormUser form .EditUsers .AREA .Aligne textarea {
+  background-color: #112B3D;
+  color: #CED8E2;
+  border: 0px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: 95%;
+  height: 150px;
+}
+.FormUser form .EditUsers .sauvegarderAD {
+  display: flex;
+  justify-content: center;
+  margin: 60px;
+}
+.FormUser form .EditUsers .sauvegarderAD button {
+  background-color: #112B3D;
+  color: #CED8E2;
+  border: 0px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.FormCate form {
+  display: flex;
+  justify-content: center;
+}
+.FormCate form .EditCategories {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.FormCate form .EditCategories .EditLigne .Aligne input {
+  background-color: #112B3D;
+  color: #CED8E2;
+  border: 0px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+}
+.FormCate form .EditCategories .EditLigne .Aligne p {
+  color: #D43B3B;
+}
+.FormCate form .EditCategories .sauvegarderAD {
+  display: flex;
+  justify-content: center;
+  margin: 60px;
+}
+.FormCate form .EditCategories .sauvegarderAD button {
+  background-color: #112B3D;
+  color: #CED8E2;
+  border: 0px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.FormSous form {
+  display: flex;
+  justify-content: center;
+}
+.FormSous form .EditSousCategories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+.FormSous form .EditSousCategories .EditLigne .Aligne input {
+  background-color: #112B3D;
+  color: #CED8E2;
+  border: 0px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+}
+.FormSous form .EditSousCategories .EditLigne .Aligne p {
+  color: #D43B3B;
+}
+.FormSous form .EditSousCategories .EditLigne .Aligne select {
+  background-color: #112B3D;
+  color: #CED8E2;
+  padding: 10px;
+  border: 0px;
+  border-radius: 10px;
+}
+.FormSous form .EditSousCategories .sauvegarderAD {
+  display: flex;
+  justify-content: center;
+  margin: 60px;
+}
+.FormSous form .EditSousCategories .sauvegarderAD button {
+  background-color: #112B3D;
+  color: #CED8E2;
+  border: 0px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.FormPro form {
+  display: flex;
+  justify-content: center;
+}
+.FormPro form .EditProduits {
+  width: fit-content;
+}
+.FormPro form .EditProduits .EditLigne {
+  display: flex;
+  width: 100%;
+}
+.FormPro form .EditProduits .EditLigne .Aligne {
+  width: 100%;
+}
+.FormPro form .EditProduits .EditLigne .Aligne input {
+  background-color: #112B3D;
+  color: #CED8E2;
+  border: 0px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+}
+.FormPro form .EditProduits .EditLigne .Aligne p {
+  color: #D43B3B;
+}
+.FormPro form .EditProduits .EditLigne .Aligne select {
+  background-color: #112B3D;
+  color: #CED8E2;
+  padding: 10px;
+  border: 0px;
+  border-radius: 10px;
+}
+.FormPro form .EditProduits .EditLigne .Aligne textarea {
+  background-color: #112B3D;
+  color: #CED8E2;
+  border: 0px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: 95%;
+  height: 150px;
+}
+.FormPro form .EditProduits .sauvegarderAD {
+  display: flex;
+  justify-content: center;
+  margin: 60px;
+}
+.FormPro form .EditProduits .sauvegarderAD button {
+  background-color: #112B3D;
+  color: #CED8E2;
+  border: 0px;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,44 +1,18 @@
-<!-- <h1><?= $categorie->titre ?></h1>
-
-<div class="row">
-    <div class="col-sm-8">
-        <?php foreach ($articles as $post): ?>
-
-            <h2><a href="<?= $post->url ?>"><?= $post->titre; ?></a></h2>
-
-            <p><em><?= $post->categorie; ?></em></p>
-
-            <p><?= $post->extrait; ?></p>
-
-        <?php endforeach; ?>
-
-    </div>
-
-    <div class="col-sm-4">
-        <ul>
-            <?php foreach($categories as $categorie): ?>
-                <li><a href="<?= $categorie->url; ?>"><?= $categorie->titre; ?></a></li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-</div> -->
-
-<!-- <?php foreach($categories as $categorie): ?>
-                <li><a href="<?= $categorie->url; ?>"><?= $categorie->titre; ?></a></li>
-            <?php endforeach; ?> -->
-
 <main>
     <section>
         <div class="Category">
             <div class="InfoCategory">
-                <p class="CHAKRARegular font40">Tous nos thémes de jeux de manette PS5</p>
+                <p class="CHAKRARegular font40">Tous nos manettes <?=$categorieAppareil->titre?></p>
             </div>
             <div class="ContenuCategory">
                 <div class="TousArticles">
                     <div class="Articles">
-                        <a href="../public/index.php?p=posts.show&id=1"><img src="..\public\img\Article\CouleurRouge.png" alt=""></a>
-                        <a href="../public/index.php?p=posts.show&id=1" class="NomArticle policeCHAKRA font24">Couleur Rouge - 64,99 €</a>
-                        <a href="../public/index.php?p=posts.show&id=1" class="btnAcheter policeCHAKRA font20">Acheter</a>
+                        <?php foreach($produits as $produit): ?>
+                            <?=var_dump($produit)?>
+                        <a href="../public/index.php?p=posts.show&id=<?=$produit->id?>"><img src="..\public\img\upload\<?=$produit->img2?>" alt="Image Produit"></a>
+                        <a href="../public/index.php?p=posts.show&id=<?=$produit->id?>" class="NomArticle policeCHAKRA font24"><?=$produit->titre?> - <?=$produit->prix?></a>
+                        <a href="../public/index.php?p=posts.show&id=<?=$produit->id?>" class="btnAcheter policeCHAKRA font20">Acheter</a>
+                        <?php endforeach; ?>
                     </div>
                     <div class="Articles">
                         <a href="../public/index.php?p=posts.show&id=1"><img src="..\public\img\Article\CouleurRouge.png" alt=""></a>

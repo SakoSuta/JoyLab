@@ -1,9 +1,11 @@
 .Panier {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin-bottom: 130px;
   .InfoPanier {
     color: $bleu;
-    margin: 103px 0px 98px 67px;
+    margin: 205px 0px 98px 67px;
   }
 
   .ContenuPanier {

@@ -11,27 +11,28 @@ class UsersController extends AppController {
     public function __construct(){
         parent::__construct();
         $this->loadModel('User');
+        $this->loadModel('Category');
     }
 
     public function login(){
-        $errors = false;
+        $categories = $this->Category->all();
         $errorss = false;
         if(!empty($_POST)){
             $auth = new DBAuth(App::getInstance()->getDb());
             if($auth->login($_POST['email'], $_POST['password'])){
                 if($_SESSION['user']->role === 'ROLE_ADMIN'){
                     // champ user 'role' administrateur
-                    header('Location: index.php?p=admin.posts.index');
+                    header('Location: index.php?p=admin.users.index');
                     // champ user 'user'
                 }else{
-                    header('Location: index.php');
+                    header('Location: index.php?p=users.Compte');
                 }
             } else {
                 $errorss = true;
             }
         }
         $form = new BootstrapForm($_POST);
-        $this->render('users.login', compact('form', 'errorss'));
+        $this->render('users.login', compact('categories', 'form', 'errorss'));
     }
 
     /*
@@ -47,44 +48,89 @@ class UsersController extends AppController {
     * fonction d'inscription de l'utilisateur
     */
     public function inscription(){
-        $errors = false;
-        $messageError = null;
+        $categories = $this->Category->all();
+        $errors = array();
+        $success = true;
+        $errorss = false;
 
-        if(!empty($_POST)){
-            var_dump($_POST);
-            // Vérification des champs de manière générale
-            if(empty($_POST['firstname']) || 
-               empty($_POST['lastname']) || 
-               empty($_POST['email']) ||
-               empty($_POST['password']) ||
-               empty($_POST['passwordVerif'])
-               ){
-                $errors = true;
-                $messageError = "Veuillez remplir tous les champs";
-            }else{
+        if(empty($_POST['firstname'])){
+            $errors["firstnameError"] = "Veuillez saisir votre prénom.";
+            $success = false;
+        }
 
-                // if($_POST['email'] != $_POST['emailVerif']){
-                //     $errors = true;
-                //     $messageError = "Les champs d'email sont incorrect";
-                // }
+        if(empty($_POST['lastname'])){
+            $errors["lastnameError"] = "Veuillez saisir votre nom.";
+            $success = false;
+        }
 
-                if($_POST['password'] != $_POST['passwordVerif']){
-                    $errors = true;
-                    $messageError = "Les champs de password sont incorrect";
-                }
+        if(empty($_POST["email"])){
+            $errors["emailError"] = "Veuillez saisir votre e-mail.";
+            $success = false;
+        } else if(!empty($_POST["email"]) && !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+            $errors["emailError"] = "Veuillez saisir un email valide.";
+            $success = false;
+        }
 
-                // if(strlen($_POST['tel']) < 10){
-                //     $errors = true;
-                //     $messageError = "Le champ de téléphone doit comporter 10 chiffres";
-                // }
+        if(empty($_POST["password"])){
+            $errors["passwordError"] = "Veuillez saisir votre mot de passe.";
+            $success = false;
+        }
+        else if(!preg_match('@[A-Z]@', $_POST["password"]) || !preg_match('@[a-z]@', $_POST["password"]) || !preg_match('@[0-9]@', $_POST["password"]) || !strlen($_POST["password"]) >= 8){
+            $errors["passwordError"] = "Votre mot de passe doit contenir: au moins 8 caractères, au moins une lettre majuscule et au moins une lettre miniscule.";
+            $success = false;
+        }
 
-                if(!$errors){
-                    $this->registration($_POST);
-                }   
-            }
+        if($_POST['password'] != $_POST['passwordVerif']){
+            $errors["passwordVerifError"] = "Les deux mots de passe ne correspondent pas.";
+            $success = false;
+        }
+
+        if($success){
+            $this->registration($_POST);
         }
         $form = new BootstrapForm($_POST);
-        $this->render('users.login', compact('form', 'errors', 'messageError'));
+        $this->render('users.login', compact('categories', 'form', 'errors', 'success','errorss'));
+    }
+
+    /*
+    * fonction de modifier un utilisateur depuis Compte
+    */
+
+    public function Modification(){
+        $categories = $this->Category->all();
+        $errors = array();
+        $success = true;
+
+        if(empty($_POST['firstname'])){
+            $errors["firstnameError"] = "Veuillez saisir votre prénom.";
+            $success = false;
+        }
+
+        if(empty($_POST['lastname'])){
+            $errors["lastnameError"] = "Veuillez saisir votre nom.";
+            $success = false;
+        }
+
+        if(!empty($_POST["tel"]) && (!filter_var( $_POST["tel"]) || strlen($_POST["tel"]) != 10)){
+            $errors["telError"] = "Veuillez saisir un numéro valide.";
+            $success = false;
+        }
+
+        if(empty($_POST["email"])){
+            $errors["emailError"] = "Veuillez saisir votre e-mail.";
+            $success = false;
+        } else if(!empty($_POST["email"]) && !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+            $errors["emailError"] = "Veuillez saisir un email valide.";
+            $success = false;
+        }
+
+        if($success){
+            $this->editCompte($_POST);
+        }else{
+            echo '<p class="font40 coloro">no</p>';
+        }
+        $form = new BootstrapForm($_POST);
+        $this->render('users.Compte', compact('categories', 'form', 'errors', 'success'));
     }
 
     /*
@@ -97,7 +143,7 @@ class UsersController extends AppController {
                 'lastname' => $_POST['lastname'],
                 'email' => $_POST['email'],
                 'role' => 'ROLE_USER',
-                'password' => sha1($_POST['password']),
+                'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
             ]);
             if($result){
                 header('Location: index.php?p=users.login');
@@ -105,13 +151,39 @@ class UsersController extends AppController {
         }
     }
 
+    /*
+    * fonction d'enregistrement des modifs de l'utilisateur
+    */
+
+    public function editCompte($donnees){
+        if (!empty($donnees)) {
+            $result = $this->User->update($_SESSION['auth'], [
+                'firstname' => $_POST['firstname'],
+                'lastname' => $_POST['lastname'],
+                'tel' => $_POST['tel'],
+                'email' => $_POST['email'],
+                'adresse' => $_POST['adresse'],
+            ]);
+            if($result){
+                header('Location: index.php?p=users.Compte');
+            }
+        }
+    }
+
     public function panier(){
-        $this->render('users.panier');
+        $categories = $this->Category->all();
+        $this->render('users.panier', compact('categories'));
     }
 
     public function compte(){
-        $form = new BootstrapForm($_POST);
-        $this->render('users.compte', compact('form'));
+        $categories = $this->Category->all();
+        $Utilisateur = $this->User->find($_SESSION['auth']);
+        $form = new BootstrapForm($Utilisateur);
+        if($_SESSION['user']->role === 'ROLE_ADMIN'){
+            // champ user 'role' administrateur
+            header('Location: index.php?p=admin.users.index');
+            // champ user 'user'
+        }
+        $this->render('users.Compte', compact('categories', 'form','Utilisateur'));
     }
-
 }

@@ -49,7 +49,7 @@ class Form{
      * @param array $options
      * @return string
      */
-    public function input($name, $label, $options = []){
+    public function input($name, $label, $options = [], $messageError){
         $type = isset($options['type']) ? $options['type'] : 'text';
         return $this->surround(
             '<input type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '">'

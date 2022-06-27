@@ -2,14 +2,15 @@
 
 namespace App\Controller;
 
-class DemoController extends AppController{
+class DemoController extends AppController
+{
 
-    public function index(){
+    public function index()
+    {
         require ROOT . '/Query.php';
         echo \Query::select('id', 'titre', 'contenu')
-            ->from('articles', 'Post')
+            ->from('produits', 'Post')
             ->where('Post.category_id = 1')
             ->where('Post.date > NOW()');
     }
-
 }

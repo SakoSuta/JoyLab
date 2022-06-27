@@ -7,7 +7,7 @@ class BootstrapForm extends Form{
      * @return string
      */
     protected function surround($html){
-        return "<div class=\"infoInput\">{$html}</div>";
+        return "<div class=\"Aligne\">{$html}</div>";
     }
 
     /**
@@ -16,25 +16,32 @@ class BootstrapForm extends Form{
      * @param array $options
      * @return string
      */
-    public function input($name, $label, $options = []){
+    public function input($name, $label, $options = [], $messageError = null){
         $type = isset($options['type']) ? $options['type'] : 'text';
         if($type === 'textarea'){
-            $input = '<textarea name="' . $name . '" placeholder="' . $label . '" class="font20 policeCHAKRA">' . $this->getValue($name) . '</textarea>';
-        } else{
-            $input = '<input type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '" placeholder="' . $label . '" class="policeCHAKRA font20" min="1" max="20">';
+            $input = '<div class="Aligne">
+                        <textarea name="' . $name . '" placeholder="' . $label . '" class="font20 policeCHAKRA">' . $this->getValue($name) . '</textarea>
+                        <p class="policeCHAKRA font16">' . $messageError . '</p>
+                    </div>';
+        }
+        else{
+            $input = '<div class="Aligne">
+                        <input type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '" placeholder="' . $label . '" class="policeCHAKRA font20" step="any">
+                        <p class="policeCHAKRA font16">' . $messageError . '</p>
+                     </div>';
         }
         return $input;
     }
 
     public function select($name, $label, $options){
-        $label = '<label>' . $label . '</label>';
-        $input = '<select class="form-control" name="' . $name . '">';
+        $label = '<label class="CHAKRAMedium font20">' . $label . '</label>';
+        $input = '<select class="policeCHAKRA font20" name="' . $name . '">';
         foreach($options as $k => $v){
             $attributes = '';
             if($k == $this->getValue($name)){
                 $attributes = ' selected';
             }
-            $input .= "<option value='$k'$attributes>$v</option>";
+            $input .= "<option class=\"policeCHAKRA font20\" value='$k'$attributes>$v</option>";
         }
         $input .= '</select>';
         return $this->surround($label . $input);

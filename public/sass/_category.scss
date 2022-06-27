@@ -1,12 +1,17 @@
 .Category {
   width: 100%;
-  margin: 70px 0px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   .InfoCategory {
+    margin-top: 205px;
     margin-bottom: 70px;
+
+    p{
+      color: $bleu;
+    }
   }
 
   .ContenuCategory {
@@ -33,6 +38,9 @@
         .NomArticle {
           color: $blanc;
           margin: 25px 0px;
+        }
+        .NomArticle:hover {
+          color: $vert;
         }
 
         .btnAcheter {

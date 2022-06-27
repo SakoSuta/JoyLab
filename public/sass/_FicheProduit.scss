@@ -4,6 +4,7 @@
     justify-content: center;
 
     .ContenuFP{
+    margin-top: 160px;
         width: 90%;
         display: flex;
         justify-content: space-between;
@@ -57,6 +58,7 @@
                         p{
                             color: $blanc;
                             margin-right: 5px;
+                            min-width: fit-content;
                         }
 
                         .InputQuanti{
@@ -93,20 +95,19 @@
                 display: flex;
                 justify-content: center;
                 margin-bottom: 70px;
-                a{
+                button{
                     background-color: $blanc;
                     color: $bleu;
                     padding: 16px 60px;
+                    border: 0px;
                     border-radius: 10px;
                     text-decoration: none;
                 }
             }
-            .AjoutPanier:hover{
-                a{
+            button:hover{
                     background-color: $vert;
                     color: $blanc;
                 }
-            }
         }
     }
 }

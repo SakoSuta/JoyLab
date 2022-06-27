@@ -15,30 +15,32 @@
             </div>
         </div>
         <div class="NousContacter">
-            <p class="CHAKRABold font40">Nous Contacter</p>
+            <div class="TitreContact">
+                <p class="CHAKRABold font40">Nous Contacter</p>
+            </div>
             <div class="FormContact">
-                <form method="post">
+                <form method="post" action="index.php?p=posts.contact">
                     <div class="CFirstLastName">
                         <div class="InfoInputC">
-                            <?= $form->input('firstname', 'Prénom'); ?>
+                            <?= $form->input('firstname', 'Prénom', ['type' => 'text'], isset($errors["firstnameError"]) ? $errors["firstnameError"] : ""); ?>
                         </div>
                         <div class="InfoInputC">
-                            <?= $form->input('Lastname', 'Nom'); ?>
+                            <?= $form->input('lastname', 'Nom', ['type' => 'text'], isset($errors["lastnameError"]) ? $errors["lastnameError"] : ""); ?>
                         </div>
                     </div>
                     <div class="CNumMail">
                         <div class="InfoInputC">
                             <img src="../public/img/Icon/White/Phone.svg" alt="Mail">
-                            <?= $form->input('Tel', 'Téléphone', ['type' => 'tel', 'maxlength' => '10']); ?>
+                            <?= $form->input('tel', 'Téléphone', ['type' => 'tel'],  isset($errors["telError"]) ? $errors["telError"] : ""); ?>
                         </div>
                         <div class="InfoInputC">
                             <img src="../public/img/Icon/White/mail.svg" alt="Mail">
-                            <?= $form->input('email', 'Email', ['type' => 'email']); ?>
+                            <?= $form->input('email', 'Email', ['type' => 'email'],  isset($errors["emailError"]) ? $errors["emailError"] : ""); ?>
                         </div>
                     </div>
                     <div class="Message">
                         <div class="InfoInputC">
-                            <?= $form->input('firstname', 'Message', ['type' => 'textarea']); ?>
+                            <?= $form->input('message', 'Message', ['type' => 'textarea'],  isset($errors["messageError"]) ? $errors["messageError"] : ""); ?>
                         </div>
                     </div>
                     <div class="CEnvoyer">

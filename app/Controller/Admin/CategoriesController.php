@@ -12,34 +12,93 @@ class CategoriesController extends AppController{
     }
 
     public function index(){
-        $items = $this->Category->all();
-        $this->render('admin.categories.index', compact('items'));
+        if($_SESSION['user']->role != 'ROLE_ADMIN'){
+            header('Location: index.php');
+        }
+        $categories = $this->Category->all();
+        $this->render('admin.categories.index', compact('categories'));
     }
 
-    public function add(){
-        if (!empty($_POST)) {
+    public function Ajouter()
+    {
+        if($_SESSION['user']->role != 'ROLE_ADMIN'){
+            header('Location: index.php');
+        }
+        $errors = array();
+
+        if ($_POST) {
+            $success = true;
+
+            if (empty($_POST['titre'])) {
+                $errors["titreError"] = "Veuillez saisir un nom catégorie.";
+                $success = false;
+            }
+
+            if ($success) {
+                $this->add($_POST);
+            }
+        }
+        $form = new BootstrapForm($_POST);
+        $this->render('admin.categories.add', compact('form', 'errors'));
+    }
+
+    public function add($donnees)
+    {
+        if($_SESSION['user']->role != 'ROLE_ADMIN'){
+            header('Location: index.php');
+        }
+        if (!empty($donnees)) {
             $result = $this->Category->create([
                 'titre' => $_POST['titre'],
             ]);
-            return $this->index();
+            if ($result) {
+                header('Location: index.php?p=admin.categories.index');
+            }
         }
-        $form = new BootstrapForm($_POST);
-        $this->render('admin.categories.edit', compact('form'));
     }
 
-    public function edit(){
-        if (!empty($_POST)) {
+    public function Modif()
+    {
+        if($_SESSION['user']->role != 'ROLE_ADMIN'){
+            header('Location: index.php');
+        }
+        $errors = array();
+
+        if ($_POST) {
+            $success = true;
+
+            if (empty($_POST['titre'])) {
+                $errors["titreError"] = "Veuillez saisir un nom catégories.";
+                $success = false;
+            }
+            if ($success) {
+                $this->editer($_POST);
+            }
+        }
+        $categories = $this->Category->find($_GET['id']);
+        $form = new BootstrapForm($categories);
+        $this->render('admin.categories.edit', compact('form', 'errors', 'categories'));
+    }
+
+    public function editer($donnees)
+    {
+        if($_SESSION['user']->role != 'ROLE_ADMIN'){
+            header('Location: index.php');
+        }
+        if (!empty($donnees)) {
             $result = $this->Category->update($_GET['id'], [
                 'titre' => $_POST['titre'],
             ]);
-            return $this->index();
+            if ($result) {
+                header('Location: index.php?p=admin.categories.index');
+            }
         }
-        $category = $this->Category->find($_GET['id']);
-        $form = new BootstrapForm($category);
-        $this->render('admin.categories.edit', compact('form'));
     }
 
     public function delete(){
+        if($_SESSION['user']->role != 'ROLE_ADMIN'){
+            header('Location: index.php');
+        }
         if (!empty($_POST)) {
             $result = $this->Category->delete($_POST['id']);
             return $this->index();

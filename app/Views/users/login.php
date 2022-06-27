@@ -3,12 +3,6 @@
     <p class="MonCompte font48 policeCHAKRA CHAKRASemiBold">Mon Compte</p>
   </div>
 
-  <?php if ($errors) : ?>
-    <div class="Erreur font20 policeIBM">
-      <?= $messageError ?>
-    </div>
-  <?php endif; ?>
-
   <?php if ($errorss) : ?>
     <div class="Erreur font16 policeIBM">
       Identifiants incorrects
@@ -23,24 +17,24 @@
         <form method="post" action="index.php?p=users.inscription">
           <div class="FNameLName">
             <div class="InfoInput">
-              <?= $form->input('firstname', 'Prénom'); ?>
+              <?= $form->input('firstname', 'Prénom', ['type' => 'text'], isset($errors["firstnameError"]) ? $errors["firstnameError"] : ""); ?>
             </div>
             <div class="InfoInput">
-              <?= $form->input('lastname', 'Nom'); ?>
+              <?= $form->input('lastname', 'Nom',['type' => 'text'], isset($errors["lastnameError"]) ? $errors["lastnameError"] : ""); ?>
             </div>
           </div>
           <div class="AutreInfo">
             <div class="InfoInput">
               <img src="../public/img/Icon/Black/mail.svg" alt="Mail">
-              <?= $form->input('email', 'Email', ['type' => 'email']); ?>
+              <?= $form->input('email', 'Email', ['type' => 'email'],  isset($errors["emailError"]) ? $errors["emailError"] : ""); ?>
             </div>
             <div class="InfoInput">
               <img src="../public/img/Icon/Black/lock.svg" alt="Lock">
-              <?= $form->input('password', 'Mot de passe', ['type' => 'password']); ?>
+              <?= $form->input('password', 'Mot de passe', ['type' => 'password'],  isset($errors["passwordError"]) ? $errors["passwordError"] : ""); ?>
             </div>
             <div class="InfoInput">
               <img src="../public/img/Icon/Black/lock.svg" alt="Lock">
-              <?= $form->input('passwordVerif', 'Confirmez Mot de passe', ['type' => 'password']); ?>
+              <?= $form->input('passwordVerif', 'Confirmez Mot de passe', ['type' => 'password'],  isset($errors["passwordVerifError"]) ? $errors["passwordVerifError"] : ""); ?>
             </div>
           </div>
           <button class="sinscrire font20 policeCHAKRA">S'inscrire</button>
@@ -51,7 +45,7 @@
     <div class="signIn">
       <p class="TitreSignUp-In font40 CHAKRABold">Se Connecter</p>
       <div class="FormSignIn">
-        <form method="post">
+        <form method="post" action="index.php?p=users.login">
           <div class="InfoInput">
             <img src="../public/img/Icon/White/mail.svg" alt="Mail">
             <?= $form->input('email', 'Adresse Email', ['type' => 'email']); ?>

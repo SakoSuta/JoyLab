@@ -20,7 +20,7 @@
         <?= $form->input('emailVerif', 'Confirmez Email', ['type' => 'email']); ?>
       </div>
       <div class="col-lg-6 col-12">
-        <?= $form->input('tel', 'Téléphone', ['type' => 'tel', 'maxlength' => '10']); ?>
+        <?= $form->input('tel', 'Téléphone', ['type' => 'tel']); ?>
       </div>
       <div class="col-lg-6 col-12">
         <?= $form->input('username', 'Pseudo'); ?>
