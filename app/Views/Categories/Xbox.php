@@ -2,7 +2,7 @@
     <section>
         <div>
             <video autoplay muted loop>
-            <source src="../public/img/Video/PS5.mp4" type="video/mp4">
+            <source src="../public/img/Video/XBOX.mp4" type="video/mp4">
             </video>
         </div>
     </section>
@@ -22,7 +22,7 @@
                 <div class="passe"><img src="../public/img/Icon/Black/Suivant.svg" alt="Suivant"></div>
             </div>
             <div class="VoirPlusApp">
-                <a href="../public/index.php?p=categories.souscategory&id=1" class="policeCHAKRA font20">Voir plus</a>
+                <a href="../public/index.php?p=categories.souscategory&id=3" class="policeCHAKRA font20">Voir plus</a>
             </div>
         </div>
         <div class="CategoryAppareil">
@@ -40,7 +40,7 @@
                 <div class="passe"><img src="../public/img/Icon/Black/Suivant.svg" alt="Suivant"></div>
             </div>
             <div class="VoirPlusApp">
-                <a href="../public/index.php?p=categories.souscategory&id=2" class="policeCHAKRA font20">Voir plus</a>
+                <a href="../public/index.php?p=categories.souscategory&id=4" class="policeCHAKRA font20">Voir plus</a>
             </div>
         </div>
     </section>

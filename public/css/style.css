@@ -236,7 +236,7 @@ nav {
   position: fixed;
   top: 0px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #112B3D;
 }
 
 nav.scrolled {
@@ -246,6 +246,10 @@ nav.scrolled {
   z-index: 10;
   transition: 0.7s;
   background-color: #112B3D;
+}
+
+input {
+  outline: none;
 }
 
 .CategorieAc {
@@ -361,6 +365,7 @@ nav.scrolled {
   margin-bottom: 8px;
   width: 100%;
   border: 0px;
+  outline: none;
   color: #112B3D;
   background-color: transparent;
 }
