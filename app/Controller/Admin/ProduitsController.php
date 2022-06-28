@@ -14,7 +14,7 @@ class ProduitsController extends AppController{
 
     public function index(){
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         $produits = $this->Produit->all();
         $this->render('admin.produits.index', compact('produits'));
@@ -23,7 +23,7 @@ class ProduitsController extends AppController{
     public function Ajouter()
     {
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         $errors = array();
 
@@ -57,7 +57,7 @@ class ProduitsController extends AppController{
     public function add($donnees)
     {
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
 
         if (!empty($donnees)) {
@@ -85,7 +85,7 @@ class ProduitsController extends AppController{
     public function Modif()
     {
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         $errors = array();
 
@@ -120,7 +120,7 @@ class ProduitsController extends AppController{
     public function editer($donnees)
     {
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
 
         $produitImg = $this->Produit->find($_GET['id']);
@@ -149,7 +149,7 @@ class ProduitsController extends AppController{
 
     public function delete(){
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
 
         if (!empty($_POST)) {

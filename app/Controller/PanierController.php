@@ -36,13 +36,14 @@ class PanierController extends AppController{
      */
     public function add(){
 
-        $referer = $_SERVER['HTTP_REFERER']; 
         if($_POST['nbr'] > 0 ){
+            $_SESSION['panier']['produit'][$_POST['idProduit']]['titre'] = $_POST['titre'];
+            $_SESSION['panier']['produit'][$_POST['idProduit']]['souscategories'] = $_POST['souscategories'];
             $_SESSION['panier']['produit'][$_POST['idProduit']]['prix'] = $_POST['prix'];
             $_SESSION['panier']['produit'][$_POST['idProduit']]['nbr'] += $_POST['nbr'];
-            $_SESSION['panier']['produit'][$_POST['idProduit']]['titre'] = $_POST['titre'];            
+            $_SESSION['panier']['produit'][$_POST['idProduit']]['img'] = $_POST['img'];
         } 
-        header('Location: '.$referer.'');
+        header('Location: index.php?p=panier.index');
        
     }
 
@@ -74,8 +75,7 @@ class PanierController extends AppController{
      * Page de confirmation ajout dans table commande et détruire le panier
      */
     public function confirmation(){
-
-        $referer = $_SERVER['HTTP_REFERER']; 
+        $categories = $this->Category->all();
 
         if(!empty($_POST['user_id'])){
 
@@ -90,10 +90,10 @@ class PanierController extends AppController{
             // Détruire session panier
             unset($_SESSION['panier']);
 
-            $this->render('panier.confirmation');
+            $this->render('panier.confirmation', compact('categories'));
         }else{
 
-            header('Location: '.$referer.'');
+            header('Location: index.php?p=users.login');
         }
 
     }

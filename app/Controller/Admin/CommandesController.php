@@ -13,46 +13,9 @@ class CommandesController extends AppController{
 
     public function index(){
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
-
-        $produits = $this->Produit->all();
-        $this->render('admin.commandes.index', compact('produits'));
+        $commandes = $this->Commande->all();
+        $this->render('admin.commandes.index', compact('commandes'));
     }
-
-    public function add(){
-        if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
-        }
-
-        if (!empty($_POST)) {
-            //Enregistrement de l'image
-            $image = $this->uploadImage();
-
-            $result = $this->Produit->create([
-                'titre' => $_POST['titre'],
-                'description' => $_POST['description'],
-                'date' => date('Ymd'),
-                'img' => ($image)? $image : null, 
-                'prix' => $_POST['prix'],
-                'category_id' => $_POST['category_id'],
-                'sous_category_id' => $_POST['sous_category_id']
-            ]);
-            if($result){
-                return $this->index();
-            }
-        }
-
-        $this->loadModel('Category');
-        $this->loadModel('SousCategory');
-
-        $categories = $this->Category->extract('id', 'titre');
-        $sousCategories = $this->SousCategory->extract('id', 'titre');
-
-        $form = new BootstrapForm($_POST);
-        $this->render('admin.commandes.edit', compact('categories', 'sousCategories', 'form'));
-    }
-
-
-
 }

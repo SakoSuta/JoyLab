@@ -25,23 +25,36 @@ class CategoriesController extends AppController
     public function souscategory()
     {
         $categories = $this->Category->all();
-        $categorieAppareil = $this->SousCategory->find($_GET['id']);
-        if ($categorieAppareil === false) {
+        $souscategories = $this->SousCategory->find($_GET['id']);
+        if ($souscategories === false) {
             $this->notFound();
         }
         $produits = $this->Produit->lastBySousCategory($_GET['id']);
-        $this->render('categories.souscategory', compact('categories', 'categorieAppareil', 'produits'));
+        $this->render('categories.souscategory', compact('categories', 'souscategories', 'produits'));
     }
 
-    public function category()
+    public function PlayStation()
     {
         $categories = $this->Category->all();
-        $sous_categories = $this->SousCategory->allByCategory($_GET['id']);
-        if ($sous_categories === false) {
-            $this->notFound();
-        }
-        $produits = $this->Produit->lastBySousCategory($_GET['id']);
-        $this->render('categories.category', compact('categories', 'sous_categories', 'produits'));
+        $produits4 = $this->Produit->lastBySousCategorylim(1);
+        $produits5 = $this->Produit->lastBySousCategorylim(2);
+        $this->render('categories.PlayStation', compact('categories', 'produits4','produits5'));
+    }
+
+    public function Xbox()
+    {
+        $categories = $this->Category->all();
+        $produits4 = $this->Produit->lastBySousCategorylim(3);
+        $produits5 = $this->Produit->lastBySousCategorylim(4);
+        $this->render('categories.Xbox', compact('categories', 'produits4','produits5'));
+    }
+
+    public function Nintendo()
+    {
+        $categories = $this->Category->all();
+        $produits4 = $this->Produit->lastBySousCategorylim(3);
+        $produits5 = $this->Produit->lastBySousCategorylim(4);
+        $this->render('categories.Nintendo', compact('categories', 'produits4','produits5'));
     }
 
 }

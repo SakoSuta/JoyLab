@@ -46,8 +46,6 @@ html {
 .navig {
   width: 100%;
   height: 130px;
-  background-color: #112B3D;
-  position: fixed;
 }
 .navig .LogoNav {
   margin: 29px 0px 0px 69px;
@@ -223,27 +221,31 @@ html {
   fill: #1CC9A1;
 }
 
-.scroll::-webkit-scrollbar {
-  background-color: #1CC9A1;
-  margin-right: 10px;
-  border-radius: 10px;
-  border: solid 4px transparent;
-  border-right-width: 80px;
-  width: 10px;
-}
-
-.scroll::-webkit-scrollbar-thumb {
-  background-color: #112B3D;
-  border-radius: 10px;
-}
-
 video {
   width: 100%;
   height: 100%;
 }
 
-.coloro {
-  color: aqua;
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  background-color: #112B3D;
+  z-index: 10000;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+nav.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: 0.7s;
+  background-color: #112B3D;
 }
 
 .CategorieAc {
@@ -667,6 +669,7 @@ video {
 }
 .CategoryAppareil .ContenuCategoryApp .Articles {
   width: 80%;
+  overflow-x: scroll;
   margin: 0px 40px;
   display: flex;
   justify-content: space-between;
@@ -819,6 +822,22 @@ video {
 .Panier .ContenuPanier .TableauPanier .Colonne .Produit .InfoProduit .TitreProduit {
   margin-bottom: 40px;
 }
+.Panier .ContenuPanier .TableauPanier .Colonne .Produit .InfoProduit input {
+  background-color: #CED8E2;
+  border-radius: 10px;
+  color: #112B3D;
+  border: 0px;
+  width: 70px;
+  height: 50px;
+}
+.Panier .ContenuPanier .TableauPanier .Colonne .Produit .InfoProduit .prixTOTO input {
+  background-color: transparent;
+  text-align: center;
+  border-radius: 10px;
+  color: #112B3D;
+  border: 0px;
+  width: 100px;
+}
 .Panier .ContenuPanier .TableauPanier .Colonne .Produit .InfoProduit:hover path {
   stroke: #D43B3B;
 }
@@ -862,17 +881,26 @@ video {
   width: 376px;
   border-bottom: 1px solid;
 }
+.Panier .ContenuPanier .Resum .ContenuResume .Total input {
+  background-color: transparent;
+  text-align: right;
+  border-radius: 10px;
+  color: #112B3D;
+  border: 0px;
+  width: 200px;
+}
 .Panier .ContenuPanier .Resum .ContenuResume .Commande {
   margin-top: 50px;
 }
-.Panier .ContenuPanier .Resum .ContenuResume .Commande a {
+.Panier .ContenuPanier .Resum .ContenuResume .Commande button {
   background-color: #112B3D;
+  border: 0px;
   border-radius: 10px;
   padding: 15px 70px;
   color: #CED8E2;
   text-decoration: none;
 }
-.Panier .ContenuPanier .Resum .ContenuResume .Commande:hover a {
+.Panier .ContenuPanier .Resum .ContenuResume .Commande:hover button {
   background-color: #1CC9A1;
 }
 
@@ -1168,7 +1196,7 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 100px 0px;
+  margin: 150px 0px;
 }
 .GameOver a {
   background-color: transparent;

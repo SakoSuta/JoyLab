@@ -126,8 +126,6 @@ class UsersController extends AppController {
 
         if($success){
             $this->editCompte($_POST);
-        }else{
-            echo '<p class="font40 coloro">no</p>';
         }
         $form = new BootstrapForm($_POST);
         $this->render('users.Compte', compact('categories', 'form', 'errors', 'success'));
@@ -170,12 +168,10 @@ class UsersController extends AppController {
         }
     }
 
-    public function panier(){
-        $categories = $this->Category->all();
-        $this->render('users.panier', compact('categories'));
-    }
-
     public function compte(){
+        if(empty($_SESSION['user'])){
+            $this->forbidden();
+        }
         $categories = $this->Category->all();
         $Utilisateur = $this->User->find($_SESSION['auth']);
         $form = new BootstrapForm($Utilisateur);

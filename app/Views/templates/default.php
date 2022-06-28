@@ -15,11 +15,30 @@
 
 
     <title><?= App::getInstance()->title; ?></title>
-
-    <!-- Bootstrap core CSS -->
-    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="../public/css/reset.css" rel="stylesheet">
     <link href="../public/css/style.css" rel="stylesheet">
+
+    <script>
+        /* --------- Sticky Navbar --------- */
+
+function stickyNavbar() {
+  if (window.scrollY > 300) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+}
+window.addEventListener("scroll", stickyNavbar);
+
+/* --------- Scrolling check --------- */
+
+if (document.location.toString().match("#categorie")) {
+  $("html, body").animate(
+    { scrollTop: $("#categorie").offset().top - 1000 },
+    speed
+  );
+}
+    </script>
 
 </head>
 
@@ -32,24 +51,25 @@
             </a>
             <div class="categorieNav font24 policeIBM">
                 <?php foreach($categories as $categorie): ?>
-                    <a class="over" href="<?= $categorie->url; ?>"><?= $categorie->titre; ?></a>
+                    <a class="over" href="../public/index.php?p=categories.<?= $categorie->titre; ?>"><?= $categorie->titre; ?></a>
                 <?php endforeach; ?>
             </div>
             <div class="iconNAV">
                 <a href="">
                     <img class="overimg" src="../public/img/Icon/White/heart.svg" alt="icon coeur">
                 </a>
-                <a href="../public/index.php?p=users.panier">
+                <a href="../public/index.php?p=panier.index">
                     <img class="overimg" src="../public/img/Icon/White/shopping-basket.svg" alt="icon panier">
                 </a>
                 <?php
-                if($_SESSION['auth']){ ?>
+                if(isset($_SESSION['auth'])){ ?>
                     <a href="../public/index.php?p=users.Compte">
                     <img class="overimg" src="../public/img/Icon/White/user.svg" alt="icon utilisateur">
                     </a>
                 <?php
                 }
-                else{ ?>
+                else{ 
+                    ?>
                     <a href="../public/index.php?p=users.login">
                     <img class="overimg" src="../public/img/Icon/White/user.svg" alt="icon utilisateur">
                     </a>

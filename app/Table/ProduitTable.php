@@ -13,7 +13,7 @@ class ProduitTable extends Table{
      */
     public function last(){
         return $this->query("
-            SELECT produits.id, produits.titre, produits.img1, produits.img2, produits.img3, produits.img4, produits.prix,  produits.description
+            SELECT produits.id, produits.titre, produits.description, produits.img1, produits.img2, produits.img3, produits.img4, produits.prix
             FROM produits
             LEFT JOIN sous_categories ON sous_categories_id = sous_categories.id
             ORDER BY produits.date DESC LIMIT 3");
@@ -26,7 +26,7 @@ class ProduitTable extends Table{
      */
     public function lastByCategory($category_id){
         return $this->query("
-            SELECT produits.id, produits.titre, produits.description, produits.img, produits.prix, produits.date, categories.titre as categorie
+            SELECT produits.id, produits.titre, produits.description, produits.img1, produits.img2, produits.img3, produits.img4, produits.prix, categories.titre as categorie
             FROM produits
             LEFT JOIN categories ON categories_id = categories.id
             LEFT JOIN sous_categories ON sous_categories_id = sous_categories.id
@@ -41,36 +41,46 @@ class ProduitTable extends Table{
      */
     public function findWithCategory($id){
         return $this->query("
-            SELECT produits.id, produits.titre, produits.description, produits.img, produits.prix
+            SELECT produits.id, produits.titre, produits.description, produits.img1, produits.img2, produits.img3, produits.img4, produits.prix
             FROM produits
             WHERE produits.id = ?", [$id], true);
     }
 
     /**
-     * Récupère les derniers produits de la category demandée
+     * Récupère les derniers produits de la Sous-category demandée
      * @param $category_id int
      * @return array
      */
     public function lastBySousCategory($category_id){
         return $this->query("
-        SELECT *
+        SELECT produits.id, produits.titre, produits.description, produits.img1, produits.img2, produits.img3, produits.img4, produits.prix
         FROM produits
         LEFT JOIN sous_categories ON sous_categories_id = sous_categories.id
         WHERE produits.sous_categories_id = ?
         ORDER BY produits.id", [$category_id]);
     }
 
+    public function lastBySousCategorylim($category_id){
+        return $this->query("
+        SELECT produits.id, produits.titre, produits.description, produits.img1, produits.img2, produits.img3, produits.img4, produits.prix
+        FROM produits
+        LEFT JOIN sous_categories ON sous_categories_id = sous_categories.id
+        WHERE produits.sous_categories_id = ?
+        ORDER BY produits.id
+        LIMIT 7", [$category_id]);
+    }
+
     /**
-     * Récupère les derniers produits de la category demandée
+     * Récupère les derniers produits de la Sous-category demandée
      * @param $category_id int
      * @return array
      */
-    public function lastBySSousCategory($category_id){
+    public function produitSousCat($category_id){
         return $this->query("
-        SELECT sous_categories.titre, sous_categories.id
-            FROM sous_categories
-            LEFT JOIN categories ON categories_id = categories.id
-            WHERE sous_categories.categories_id = ?
-            ORDER BY sous_categories.id", [$category_id]);
+        SELECT produits.id, produits.titre, produits.description, produits.img1, produits.img2, produits.img3, produits.img4, produits.prix
+        FROM produits
+        LEFT JOIN sous_categories ON sous_categories_id = sous_categories.id
+        LEFT JOIN categories ON sous_categories.categories_id = categories.id 
+        WHERE sous_categories.categories_id = ?", [$category_id]);
     }
 }

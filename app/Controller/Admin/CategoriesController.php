@@ -4,16 +4,19 @@ namespace App\Controller\Admin;
 
 use Core\HTML\BootstrapForm;
 
-class CategoriesController extends AppController{
+class CategoriesController extends AppController
+{
 
-    public function __construct(){
+    public function __construct()
+    {
         parent::__construct();
         $this->loadModel('Category');
     }
 
-    public function index(){
-        if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+    public function index()
+    {
+        if ($_SESSION['user']->role != 'ROLE_ADMIN') {
+            $this->forbidden();
         }
         $categories = $this->Category->all();
         $this->render('admin.categories.index', compact('categories'));
@@ -21,8 +24,8 @@ class CategoriesController extends AppController{
 
     public function Ajouter()
     {
-        if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+        if ($_SESSION['user']->role != 'ROLE_ADMIN') {
+            $this->forbidden();
         }
         $errors = array();
 
@@ -44,8 +47,8 @@ class CategoriesController extends AppController{
 
     public function add($donnees)
     {
-        if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+        if ($_SESSION['user']->role != 'ROLE_ADMIN') {
+            $this->forbidden();
         }
         if (!empty($donnees)) {
             $result = $this->Category->create([
@@ -59,8 +62,8 @@ class CategoriesController extends AppController{
 
     public function Modif()
     {
-        if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+        if ($_SESSION['user']->role != 'ROLE_ADMIN') {
+            $this->forbidden();
         }
         $errors = array();
 
@@ -82,8 +85,8 @@ class CategoriesController extends AppController{
 
     public function editer($donnees)
     {
-        if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+        if ($_SESSION['user']->role != 'ROLE_ADMIN') {
+            $this->forbidden();
         }
         if (!empty($donnees)) {
             $result = $this->Category->update($_GET['id'], [
@@ -95,14 +98,14 @@ class CategoriesController extends AppController{
         }
     }
 
-    public function delete(){
-        if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+    public function delete()
+    {
+        if ($_SESSION['user']->role != 'ROLE_ADMIN') {
+            $this->forbidden();
         }
         if (!empty($_POST)) {
             $result = $this->Category->delete($_POST['id']);
             return $this->index();
         }
     }
-
 }

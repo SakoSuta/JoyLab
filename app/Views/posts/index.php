@@ -8,14 +8,14 @@
     </section>
     <section>
         <div class="CategorieAc">
-            <a href="">
+            <a href="index.php?p=categories.souscategory&id=1">
                 <img src="../public/img/Uniques.png" alt="Couleurs-Uniques">
             </a>
             <div class="autreCategorie">
-                <a href="" class="motifs">
+                <a href="index.php?p=categories.souscategory&id=5" class="motifs">
                     <img src="../public/img/Motifs.png" alt="Divers-Motifs">
                 </a>
-                <a href="">
+                <a href="index.php?p=categories.souscategory&id=4">
                     <img src="../public/img/Themejeux.png" alt="Thèmes-de-jeux-vidéos">
                 </a>
             </div>

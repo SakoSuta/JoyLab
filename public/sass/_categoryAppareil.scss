@@ -28,6 +28,7 @@
 
     .Articles {
       width: 80%;
+      overflow-x: scroll;
       margin: 0px 40px;
       display: flex;
       justify-content: space-between;

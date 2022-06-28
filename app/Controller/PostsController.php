@@ -27,6 +27,9 @@ class PostsController extends AppController
         $categories = $this->Category->all();
         $produits = $this->Produit->find($_GET['id']);
         $souscategories = $this->SousCategory->findWithProduit($produits->id);
+        if ($produits === false) {
+            $this->notFound();
+        }
         $form = new BootstrapForm($_POST);
         $this->render('posts.show', compact('categories', 'produits', 'form','souscategories'));
     }
@@ -82,6 +85,12 @@ class PostsController extends AppController
 
     public function Error()
     {
-        $this->render('posts.Error');
+        $categories = $this->Category->all();
+        $this->render('posts.Error', compact('categories'));
+    }
+
+    public function Interdit()
+    {
+        $this->render('posts.Interdit');
     }
 }

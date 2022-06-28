@@ -6,6 +6,7 @@ class Controller{
 
     protected $viewPath;
     protected $template;
+    
 
     protected function render($view, $variables = []){
         ob_start();
@@ -16,12 +17,14 @@ class Controller{
     }
 
     protected function forbidden(){
-        header('HTTP/1.0 403 Forbidden');
-        die('Acces interdit');
+        $categories = $this->Category->all();
+        $this->render("posts.Interdit", compact('categories'));
+        die();
     }
 
     protected function notFound(){
-        $this->render("posts.Error");
+        $categories = $this->Category->all();
+        $this->render('posts.Error', compact('categories'));
         die();
     }
 

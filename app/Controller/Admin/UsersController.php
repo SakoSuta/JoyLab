@@ -16,7 +16,7 @@ class UsersController extends AppController
     public function index()
     {
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         $Users = $this->User->all();
         $this->render('admin.users.index', compact('Users'));
@@ -25,7 +25,7 @@ class UsersController extends AppController
     public function Ajouter()
     {
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         $errors = array();
 
@@ -75,7 +75,7 @@ class UsersController extends AppController
     public function add($donnees)
     {
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         if (!empty($donnees)) {
             $result = $this->User->create([
@@ -96,7 +96,7 @@ class UsersController extends AppController
     public function Modif()
     {
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         $errors = array();
 
@@ -137,7 +137,7 @@ class UsersController extends AppController
     public function editer($donnees)
     {
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         if (!empty($donnees)) {
             $result = $this->User->update($_GET['id'], [
@@ -157,7 +157,7 @@ class UsersController extends AppController
     public function delete()
     {
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         if (!empty($_POST)) {
             $result = $this->User->delete($_POST['id']);

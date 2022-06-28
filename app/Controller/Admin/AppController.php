@@ -14,6 +14,7 @@ class AppController extends \App\Controller\AppController{
         $app = App::getInstance();
         $auth = new DBAuth($app->getDb());
         if(!$auth->logged()){
+            $this->template = 'default';
             $this->forbidden();
         }
     }

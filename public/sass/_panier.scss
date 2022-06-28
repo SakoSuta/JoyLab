@@ -67,6 +67,26 @@
             .TitreProduit{
               margin-bottom: 40px;
             }
+
+            input{
+              background-color: $blanc;
+              border-radius: 10px;
+              color: $bleu;
+              border: 0px;
+              width: 70px;
+              height: 50px;
+            }
+
+            .prixTOTO{
+              input{
+                background-color: transparent;
+                text-align: center;
+                border-radius: 10px;
+                color: $bleu;
+                border: 0px;
+                width: 100px;
+              }
+            }
           }
 
           .InfoProduit:hover {
@@ -119,11 +139,21 @@
           justify-content: space-between;
           width: 376px;
           border-bottom: 1px solid;
+
+          input{
+            background-color: transparent;
+            text-align: right;
+            border-radius: 10px;
+            color: $bleu;
+            border: 0px;
+            width: 200px;
+          }
         }
         .Commande {
           margin-top: 50px;
-          a {
+          button{
             background-color: $bleu;
+            border: 0px;
             border-radius: 10px;
             padding: 15px 70px;
             color: $blanc;
@@ -131,7 +161,7 @@
           }
         }
         .Commande:hover{
-          a{
+          button{
             background-color: $vert;
           }
         }

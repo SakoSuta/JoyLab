@@ -1,22 +1,3 @@
-<h1><?= $produit->titre; ?></h1>
-
-<img src="../public/img/upload/<?= $produit->img; ?>" style="width: 10%;">
-
-<p><?= $produit->description; ?></p>
-
-
-<p><?= $produit->prix; ?>€</p>
-
-<form method="post" action="index.php?p=panier.add">
-
-    <label for="nbr">Nombre</label>
-    <input type="number" name="nbr" id="nbr" class="form-control">
-    <input type="hidden" name="idProduit" id="idProduit" class="form-control" value="<?=$produit->id;?>">
-    <input type="hidden" name="prix" id="prix" class="form-control" value="<?=$produit->prix;?>">
-    <input type="hidden" name="titre" id="titre" class="form-control" value="<?=$produit->titre;?>">
-
-    <button class="btn btn-primary">Ajouter au panier</button>
-</form>
 <main>
     <section>
         <div class="FicheProduit">
@@ -25,7 +6,7 @@
                     <img src="..\public\img\upload\<?=$produits->img4?>" alt="Image Produit">
                 </div>
                 <div class="FicheInfo">
-                    <form methode="post" action="index.php?p=panier.add">
+                    <form method="post" action="index.php?p=panier.add">
                         <div class="haut">
                             <div class="Produit">
                                 <input type="hidden" name="img" id="img" value="<?=$produits->img4;?>">
@@ -42,7 +23,7 @@
                                     <p class="CHAKRAMedium font20">Quantité :</p>
                                     <div class="InputQuanti">
                                         <div class="Aligne">
-                                            <input type="number" name="nbr" id="nbr" placeholder="1" min="1" max="20" class="policeCHAKRA font20">
+                                            <input type="number" name="nbr" id="nbr" min="1" max="20" value="1" class="policeCHAKRA font20">
                                         </div>
                                     </div>
                                 </div>
@@ -55,7 +36,7 @@
                             </div>
                         </div>
                         <div class="AjoutPanier">
-                            <button href=""class="CHAKRAMedium font24">Ajouter au panier</button>
+                            <button class="CHAKRAMedium font24">Ajouter au panier</button>
                         </div>
                     </form>
                 </div>

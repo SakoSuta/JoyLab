@@ -14,7 +14,7 @@ class SousCategoriesController extends AppController{
 
     public function index(){
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         $sous_categories = $this->SousCategory->all();
         $this->render('admin.souscategories.index', compact('sous_categories'));
@@ -23,7 +23,7 @@ class SousCategoriesController extends AppController{
     public function Ajouter()
     {
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         $errors = array();
 
@@ -47,7 +47,7 @@ class SousCategoriesController extends AppController{
     public function add($donnees)
     {
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         if (!empty($donnees)) {
             $result = $this->SousCategory->create([
@@ -63,7 +63,7 @@ class SousCategoriesController extends AppController{
     public function Modif()
     {
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         $errors = array();
 
@@ -88,7 +88,7 @@ class SousCategoriesController extends AppController{
     public function editer($donnees)
     {
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         if (!empty($donnees)) {
             $result = $this->SousCategory->update($_GET['id'], [
@@ -103,7 +103,7 @@ class SousCategoriesController extends AppController{
 
     public function delete(){
         if($_SESSION['user']->role != 'ROLE_ADMIN'){
-            header('Location: index.php');
+            $this->forbidden();
         }
         if (!empty($_POST)) {
             $result = $this->SousCategory->delete($_POST['id']);
